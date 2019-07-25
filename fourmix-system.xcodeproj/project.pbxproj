@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A93F97DA22E97868007D7004 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F97D922E97868007D7004 /* Login.storyboard */; };
+		A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B6D3622E985C300E1C384 /* LoginController.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A93F97D922E97868007D7004 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A94B6D3622E985C300E1C384 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A93F97D722E97810007D7004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A93F97D922E97868007D7004 /* Login.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A93F97D822E97823007D7004 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A94B6D3622E985C300E1C384 /* LoginController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F2E09A3D22E94AF3003808A4 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +72,8 @@
 		F2E09A4822E94AF3003808A4 /* fourmix-system */ = {
 			isa = PBXGroup;
 			children = (
+				A93F97D822E97823007D7004 /* Controllers */,
+				A93F97D722E97810007D7004 /* Views */,
 				F2E09A4922E94AF3003808A4 /* AppDelegate.swift */,
 				F2E09A4D22E94AF3003808A4 /* Main.storyboard */,
 				F2E09A5022E94AF5003808A4 /* Assets.xcassets */,
@@ -119,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93F97DA22E97868007D7004 /* Login.storyboard in Resources */,
 				F2E09A5422E94AF5003808A4 /* LaunchScreen.storyboard in Resources */,
 				F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */,
 				F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */,
@@ -133,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
+				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
