@@ -18,6 +18,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        observes()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,11 +27,19 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginButtonHasTapped(_ sender: Any) {
-        let email = emailField.text!
-        let password = passwordField.text!
-        
-        print(email)
-        print(password)
+        if let email = emailField.text, let password = passwordField.text {
+            Token.loginRequest(email: email, password: password) { (token) in
+                if let token = token {
+                    print(token)
+                    //token.save()
+                    //                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    //                let controller = storyboard.instantiateViewController(withIdentifier: "MemoViewNav")
+                    //                self.present(controller, animated: true)
+                }
+            }
+        } else {
+            showAlart(message: "メールアドレスとパスワードは必ず入力してください。")
+        }
     }
     
     
@@ -38,6 +47,28 @@ class LoginController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
     }
+    
+    func observes() {
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.unauthorized, object: nil, queue: nil) { (notification) in
+            guard let message = notification.userInfo!["message"] else { return }
+            
+            self.showAlart(message: message as! String)
+        }
+    }
+    
+    func showAlart(message: String) {
+        let alert = UIAlertController(title: "エラーです", message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+            alert.dismiss(animated: true)
+        })
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+    }
+    
+    
     
     /*
     // MARK: - Navigation
