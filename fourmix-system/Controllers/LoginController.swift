@@ -27,18 +27,20 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginButtonHasTapped(_ sender: Any) {
-        if let email = emailField.text, let password = passwordField.text {
+        let email = emailField.text ?? ""
+        let password = passwordField.text ?? ""
+        if email == "" || password == "" {
+            showAlart(message: "メールアドレスとパスワードは必ず入力してください。")
+        } else {
             Token.loginRequest(email: email, password: password) { (token) in
                 if let token = token {
                     print(token)
-                    //token.save()
-                    //                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    //                let controller = storyboard.instantiateViewController(withIdentifier: "MemoViewNav")
-                    //                self.present(controller, animated: true)
+                    token.save()
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as! UITabBarController
+                    self.present(controller, animated: true)
                 }
             }
-        } else {
-            showAlart(message: "メールアドレスとパスワードは必ず入力してください。")
         }
     }
     

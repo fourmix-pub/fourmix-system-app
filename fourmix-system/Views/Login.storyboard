@@ -14,7 +14,7 @@
         <!--Login Controller-->
         <scene sceneID="JKL-Kc-FSk">
             <objects>
-                <viewController id="yTg-0B-1UL" customClass="LoginController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="yTg-0B-1UL" customClass="LoginController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6jp-78-ll2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
