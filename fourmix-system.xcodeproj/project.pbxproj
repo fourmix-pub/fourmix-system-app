@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */; };
+		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
+		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
+		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
+		A931997E22EA8C2B003C1F30 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997D22EA8C2B003C1F30 /* Settings.storyboard */; };
+		A931998022EA9690003C1F30 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A931997F22EA9690003C1F30 /* SettingsController.swift */; };
+		A93F97DA22E97868007D7004 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F97D922E97868007D7004 /* Login.storyboard */; };
+		A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B6D3622E985C300E1C384 /* LoginController.swift */; };
+		A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AC22E99FB000D892AE /* AuthService.swift */; };
+		A9B5A9B022E9A34000D892AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AF22E9A34000D892AE /* Token.swift */; };
+		A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9B122E9A57200D892AE /* NotificationService.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -14,12 +25,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
+		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
+		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
+		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
+		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
+		A931997B22EA8C1B003C1F30 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
+		A931997D22EA8C2B003C1F30 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A931997F22EA9690003C1F30 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		A93F97D922E97868007D7004 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A94B6D3622E985C300E1C384 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A9B5A9AC22E99FB000D892AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A9B5A9AF22E9A34000D892AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		A9B5A9B122E9A57200D892AE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2E09A5022E94AF5003808A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E09A5322E94AF5003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E09A5522E94AF5003808A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fourmix_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +52,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A93F97D722E97810007D7004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2E09A4D22E94AF3003808A4 /* Main.storyboard */,
+				A93F97D922E97868007D7004 /* Login.storyboard */,
+				A931997722EA8BE9003C1F30 /* Daily.storyboard */,
+				A931997922EA8C02003C1F30 /* DailyView.storyboard */,
+				A931997B22EA8C1B003C1F30 /* Analytics.storyboard */,
+				A931997D22EA8C2B003C1F30 /* Settings.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A93F97D822E97823007D7004 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A94B6D3622E985C300E1C384 /* LoginController.swift */,
+				A931997F22EA9690003C1F30 /* SettingsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A9B5A9AB22E99F7F00D892AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5A9AC22E99FB000D892AE /* AuthService.swift */,
+				A9B5A9B122E9A57200D892AE /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A9B5A9AE22E9A30E00D892AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5A9AF22E9A34000D892AE /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1D2E8E6F83EBDE5246C0D4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */,
+				83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6C35232CBC664C324AA565B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2E09A3D22E94AF3003808A4 = {
 			isa = PBXGroup;
 			children = (
+				A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */,
 				F2E09A4822E94AF3003808A4 /* fourmix-system */,
 				F2E09A4722E94AF3003808A4 /* Products */,
+				B1D2E8E6F83EBDE5246C0D4D /* Pods */,
+				B6C35232CBC664C324AA565B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +137,11 @@
 		F2E09A4822E94AF3003808A4 /* fourmix-system */ = {
 			isa = PBXGroup;
 			children = (
+				A9B5A9AE22E9A30E00D892AE /* Models */,
+				A9B5A9AB22E99F7F00D892AE /* Services */,
+				A93F97D822E97823007D7004 /* Controllers */,
+				A93F97D722E97810007D7004 /* Views */,
 				F2E09A4922E94AF3003808A4 /* AppDelegate.swift */,
-				F2E09A4D22E94AF3003808A4 /* Main.storyboard */,
 				F2E09A5022E94AF5003808A4 /* Assets.xcassets */,
 				F2E09A5222E94AF5003808A4 /* LaunchScreen.storyboard */,
 				F2E09A5522E94AF5003808A4 /* Info.plist */,
@@ -68,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2E09A5822E94AF5003808A4 /* Build configuration list for PBXNativeTarget "fourmix-system" */;
 			buildPhases = (
+				7DE77B9F44AD20EB7F6CC7FF /* [CP] Check Pods Manifest.lock */,
 				F2E09A4222E94AF3003808A4 /* Sources */,
 				F2E09A4322E94AF3003808A4 /* Frameworks */,
 				F2E09A4422E94AF3003808A4 /* Resources */,
+				37851BD318C073FB39AA793E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -119,20 +209,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93F97DA22E97868007D7004 /* Login.storyboard in Resources */,
 				F2E09A5422E94AF5003808A4 /* LaunchScreen.storyboard in Resources */,
 				F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */,
+				A931997E22EA8C2B003C1F30 /* Settings.storyboard in Resources */,
 				F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */,
+				A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */,
+				A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */,
+				A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37851BD318C073FB39AA793E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE77B9F44AD20EB7F6CC7FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fourmix-system-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2E09A4222E94AF3003808A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
+				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
+				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
+				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
+				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +418,7 @@
 		};
 		F2E09A5922E94AF5003808A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,6 +437,7 @@
 		};
 		F2E09A5A22E94AF5003808A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
