@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="770" y="68"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--閲覧-->
         <scene sceneID="qMy-qZ-JAi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4f-99-fHB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="shd-iW-BIr"/>
+                    <tabBarItem key="tabBarItem" title="閲覧" image="analytics-25" id="shd-iW-BIr"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rTR-Ma-3Wv">
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="-262" y="68"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="analytics-25" width="25" height="25"/>
+    </resources>
 </document>

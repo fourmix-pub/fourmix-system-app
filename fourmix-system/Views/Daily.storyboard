@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="1160.8695652173915" y="162.72321428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--日報-->
         <scene sceneID="OLO-Ya-DkU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axu-Bv-hLT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="hH5-2t-aWE"/>
+                    <tabBarItem key="tabBarItem" title="日報" image="daily-25" id="hH5-2t-aWE"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUf-Yq-sGd">
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="250.72463768115944" y="162.72321428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="daily-25" width="25" height="25"/>
+    </resources>
 </document>

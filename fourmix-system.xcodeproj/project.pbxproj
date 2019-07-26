@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
 		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
+		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
 		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
 		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
 		A931997B22EA8C1B003C1F30 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		F2E09A3D22E94AF3003808A4 = {
 			isa = PBXGroup;
 			children = (
+				A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */,
 				F2E09A4822E94AF3003808A4 /* fourmix-system */,
 				F2E09A4722E94AF3003808A4 /* Products */,
 				B1D2E8E6F83EBDE5246C0D4D /* Pods */,

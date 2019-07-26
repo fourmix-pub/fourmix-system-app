@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings Controller-->
+        <!--設定-->
         <scene sceneID="wpQ-e4-GrK">
             <objects>
                 <tableViewController id="H6t-9u-JoC" customClass="SettingsController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,61 +19,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="YE2-rc-IBv">
+                            <tableViewSection headerTitle="アカウント設定" id="YE2-rc-IBv">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kb8-A9-UVq" style="IBUITableViewCellStyleDefault" id="eFQ-b2-PyY">
-                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kb8-A9-UVq" imageView="Wnz-ml-v10" style="IBUITableViewCellStyleDefault" id="eFQ-b2-PyY">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFQ-b2-PyY" id="BFc-Vb-079">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="プロフィール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kb8-A9-UVq">
-                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <rect key="frame" x="65" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="profile-30" id="Wnz-ml-v10">
+                                                    <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
+                                            <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S9P-al-Y6o" style="IBUITableViewCellStyleDefault" id="8mB-AY-oYM">
-                                        <rect key="frame" x="0.0" y="79" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S9P-al-Y6o" imageView="iwD-XC-CIb" style="IBUITableViewCellStyleDefault" id="8mB-AY-oYM">
+                                        <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8mB-AY-oYM" id="Nzu-JA-Tvr">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9P-al-Y6o">
-                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <rect key="frame" x="65" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="password-30" id="iwD-XC-CIb">
+                                                    <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
+                                            <color key="tintColor" name="brand"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="2SZ-gE-Dbc">
+                            <tableViewSection headerTitle="ログアウト" id="2SZ-gE-Dbc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="WnT-Q9-czI" style="IBUITableViewCellStyleDefault" id="q3b-XW-Efn">
-                                        <rect key="frame" x="0.0" y="159" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="WnT-Q9-czI" imageView="WVx-ig-55n" style="IBUITableViewCellStyleDefault" id="q3b-XW-Efn">
+                                        <rect key="frame" x="0.0" y="199.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q3b-XW-Efn" id="Ifg-9Z-ezA">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ログアウト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WnT-Q9-czI">
-                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <rect key="frame" x="65" y="0.0" width="311" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="logout-30" id="WVx-ig-55n">
+                                                    <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
+                                            <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -83,17 +99,17 @@
                             <outlet property="delegate" destination="H6t-9u-JoC" id="ZSb-07-swo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qjn-YF-ZTc"/>
+                    <navigationItem key="navigationItem" title="設定" id="qjn-YF-ZTc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQu-LS-8hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442" y="35"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--設定-->
         <scene sceneID="lqO-y1-dKg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsi-AU-S5N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="NV3-Nj-0hU"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="settings-25" id="NV3-Nj-0hU"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XDM-Bl-Aid">
@@ -113,4 +129,13 @@
             <point key="canvasLocation" x="531.8840579710145" y="34.821428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logout-30" width="30" height="30"/>
+        <image name="password-30" width="30" height="30"/>
+        <image name="profile-30" width="30" height="30"/>
+        <image name="settings-25" width="25" height="25"/>
+        <namedColor name="brand">
+            <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
