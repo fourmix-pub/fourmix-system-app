@@ -52,7 +52,7 @@ struct Token: Codable {
             case let .failure(error):
                 print(error)
                 NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
-                    "code": 9999,
+                    "code": 999,
                     "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
                     ])
                 callback(nil)

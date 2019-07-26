@@ -56,6 +56,12 @@ class LoginController: UIViewController {
             
             self.showAlart(message: message as! String)
         }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.networkError, object: nil, queue: nil) { (notification) in
+            guard let message = notification.userInfo!["message"], let code = notification.userInfo!["code"] else { return }
+            
+            self.showAlart(message: "\(message as! String) (code:\(code as! Int)")
+        }
     }
     
     func showAlart(message: String) {
