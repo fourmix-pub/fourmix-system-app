@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Moya
 
 struct ProjectPreUserAnalysis: Codable {
     var id: Int
@@ -18,7 +17,7 @@ struct ProjectPreUserAnalysis: Codable {
     struct Attributes: Codable {
         var customerName: String
         var projectName: String
-        var workTime: Int
+        var workTime: Double
         var workCost: Int
         
         enum CodingKeys:String, CodingKey {
@@ -28,9 +27,11 @@ struct ProjectPreUserAnalysis: Codable {
             case workCost = "work_cost"
         }
     }
+    
     struct Relationships: Codable {
-        //var user: User
+        var user: User
     }
+    
     struct Links: Codable {
         var `self`: String?
     }

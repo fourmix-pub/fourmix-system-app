@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import Moya
 
 struct Customer: Codable {
     var id: Int
     var attributes: Attributes
+    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -26,6 +26,8 @@ struct Customer: Codable {
         }
 
     }
+    
+    struct Relationships: Codable {}
     
     struct Links: Codable {
         var `self`: String?

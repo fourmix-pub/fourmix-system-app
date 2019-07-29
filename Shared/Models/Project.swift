@@ -45,8 +45,8 @@ struct Project: Codable {
     }
     
     struct Relationships: Codable {
-//        var customer:
-//        var user: 
+        var customer: Customer
+        var user: User
     }
     
     struct Links: Codable {

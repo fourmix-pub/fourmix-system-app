@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Moya
 
 struct Daily: Codable {
     var id: Int
@@ -45,21 +44,25 @@ struct Daily: Codable {
             case createdAt = "created_at"
             case updatedAt = "updated_at"
         }
-        
     }
+    
     struct Relationships: Codable {
-        //var user: User
-        //var user: WorkType
-        //var user: JobType
-        //var user: Project
+        var user: User
+        var workType: WorkType
+        var jobType: JobType
+        var project: Project
+        
+        enum CodingKeys: String, CodingKey {
+            case user
+            case workType = "work_type"
+            case jobType =  "job_type"
+            case project
+        }
     }
+    
     struct Links: Codable {
         var `self`: String?
     }
-}
-
-struct DailyData: Codable {
-    var data: Daily
 }
 
 struct DailyCollection: Codable {

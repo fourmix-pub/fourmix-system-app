@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import Moya
 
 struct JobType: Codable {
     var id: Int
     var attributes: Attributes
+    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -27,6 +27,8 @@ struct JobType: Codable {
             case updatedAt = "updated_at"
         }
     }
+    
+    struct Relationships: Codable {}
     
     struct Links: Codable {
         var `self`: String?

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Moya
 
 struct User: Codable {
     var id: Int

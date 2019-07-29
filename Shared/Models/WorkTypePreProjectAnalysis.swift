@@ -15,14 +15,14 @@ struct WorkTypePreProjectAnalysis: Codable {
     var links: Links
     
     struct Attributes: Codable {
-        var name: String
-        var createdAt: String
-        var updatedAt: String
+        var workType: String
+        var workTime: Double
+        var workCost: Int
         
         enum CodingKeys: String, CodingKey {
-            case name
-            case createdAt = "created_at"
-            case updatedAt = "updated_at"
+            case workType = "work_type"
+            case workTime = "work_time"
+            case workCost = "work_cost"
         }
     }
     

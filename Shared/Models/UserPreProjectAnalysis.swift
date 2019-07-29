@@ -16,17 +16,13 @@ struct UserPreProjectAnalysis: Codable {
     
     struct Attributes: Codable {
         var userName: String
-        var workTime: Int
+        var workTime: Double
         var workCost: Int
-        var createdAt: String
-        var updatedAt: String
         
         enum CodingKeys: String, CodingKey {
             case userName = "user_name"
             case workTime = "work_time"
             case workCost = "work_cost"
-            case createdAt = "created_at"
-            case updatedAt = "updated_at"
         }
     }
     
