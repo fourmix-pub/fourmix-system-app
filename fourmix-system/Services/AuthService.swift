@@ -10,9 +10,9 @@ import UIKit
 import Moya
 
 let clientId = "2"
-let clientSecret = "75As5N94p6hc7fBsaSDQDpOD8l4BfvVWR0aZLZ8P"
-//let oauthUrl = "http://fourmix-system.test"
-let oauthUrl = "https://e684bf35.ngrok.io"
+let clientSecret = "nGgpRbgeFcMzUCdzlUmqxi9lBkUBezos1BIlGHf0"
+let oauthUrl = "http://fourmix-system.test"
+//let oauthUrl = "https://e684bf35.ngrok.io"
 
 enum AuthService {
     case login(email: String, password: String)
