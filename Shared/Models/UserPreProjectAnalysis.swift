@@ -11,7 +11,6 @@ import Foundation
 struct UserPreProjectAnalysis: Codable {
     var id: Int
     var attributes: Attributes
-    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -26,10 +25,6 @@ struct UserPreProjectAnalysis: Codable {
             case workCost = "work_cost"
             case workCostWithFormat = "work_cost_with_format"
         }
-    }
-    
-    struct Relationships: Codable {
-        var project: Project
     }
     
     struct Links: Codable {
