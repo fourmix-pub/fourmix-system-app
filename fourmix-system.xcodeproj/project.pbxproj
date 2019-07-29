@@ -18,6 +18,18 @@
 		A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AC22E99FB000D892AE /* AuthService.swift */; };
 		A9B5A9B022E9A34000D892AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AF22E9A34000D892AE /* Token.swift */; };
 		A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9B122E9A57200D892AE /* NotificationService.swift */; };
+		A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */; };
+		A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1B22EEAF49009F86B3 /* Daily.swift */; };
+		A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */; };
+		A9FF3E2822EEAF49009F86B3 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1D22EEAF49009F86B3 /* Department.swift */; };
+		A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1E22EEAF49009F86B3 /* User.swift */; };
+		A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1F22EEAF49009F86B3 /* Customer.swift */; };
+		A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */; };
+		A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */; };
+		A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2222EEAF49009F86B3 /* Project.swift */; };
+		A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2322EEAF49009F86B3 /* JobType.swift */; };
+		A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2422EEAF49009F86B3 /* WorkType.swift */; };
+		A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -38,6 +50,18 @@
 		A9B5A9AC22E99FB000D892AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A9B5A9AF22E9A34000D892AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		A9B5A9B122E9A57200D892AE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPreUserAnalysis.swift; sourceTree = "<group>"; };
+		A9FF3E1B22EEAF49009F86B3 /* Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysis.swift; sourceTree = "<group>"; };
+		A9FF3E1D22EEAF49009F86B3 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		A9FF3E1E22EEAF49009F86B3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A9FF3E1F22EEAF49009F86B3 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTypePreProjectAnalysis.swift; sourceTree = "<group>"; };
+		A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTypePreUserAnalysis.swift; sourceTree = "<group>"; };
+		A9FF3E2222EEAF49009F86B3 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		A9FF3E2322EEAF49009F86B3 /* JobType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
+		A9FF3E2422EEAF49009F86B3 /* WorkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkType.swift; sourceTree = "<group>"; };
+		A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +108,7 @@
 		A9B5A9AB22E99F7F00D892AE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */,
 				A9B5A9AC22E99FB000D892AE /* AuthService.swift */,
 				A9B5A9B122E9A57200D892AE /* NotificationService.swift */,
 			);
@@ -94,6 +119,32 @@
 			isa = PBXGroup;
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A9FF3E1822EEAF11009F86B3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF3E1922EEAF2F009F86B3 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A9FF3E1922EEAF2F009F86B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF3E1F22EEAF49009F86B3 /* Customer.swift */,
+				A9FF3E1B22EEAF49009F86B3 /* Daily.swift */,
+				A9FF3E1D22EEAF49009F86B3 /* Department.swift */,
+				A9FF3E2322EEAF49009F86B3 /* JobType.swift */,
+				A9FF3E2222EEAF49009F86B3 /* Project.swift */,
+				A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */,
+				A9FF3E1E22EEAF49009F86B3 /* User.swift */,
+				A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */,
+				A9FF3E2422EEAF49009F86B3 /* WorkType.swift */,
+				A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */,
+				A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +169,7 @@
 		F2E09A3D22E94AF3003808A4 = {
 			isa = PBXGroup;
 			children = (
+				A9FF3E1822EEAF11009F86B3 /* Shared */,
 				A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */,
 				F2E09A4822E94AF3003808A4 /* fourmix-system */,
 				F2E09A4722E94AF3003808A4 /* Products */,
@@ -270,11 +322,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
+				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
+				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
+				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
+				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
+				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
+				A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */,
+				A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */,
+				A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */,
+				A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */,
 				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
+				A9FF3E2822EEAF49009F86B3 /* Department.swift in Sources */,
 				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
+				A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */,
+				A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
