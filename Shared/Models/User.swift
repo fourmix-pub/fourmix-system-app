@@ -56,7 +56,6 @@ struct UserCollection {
 struct UserCreator {
     var name: String?
     var email: String?
-    var start: String?
-    var end: String?
     var password: String?
+    var passwordConform: String?
 }

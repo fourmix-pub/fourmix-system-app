@@ -89,9 +89,8 @@ extension NetworkService: TargetType {
             return .requestParameters(parameters: [
                 "name": userCreator.name as Any,
                 "email": userCreator.email as Any,
-                "start": userCreator.start as Any,
-                "end": userCreator.end as Any,
-                "password": userCreator.password as Any
+                "password": userCreator.password as Any,
+                "password_conform": userCreator.passwordConform as Any
                 ], encoding: JSONEncoding.default)
         case let .dailyCreate(dailyCreator):
             return .requestParameters(parameters: [
