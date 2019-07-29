@@ -18,11 +18,13 @@ struct WorkTypePreUserAnalysis: Codable {
         var workType: String
         var workTime: Double
         var workCost: Int
+        var workCostWithFormat: String
         
         enum CodingKeys:String, CodingKey {
             case workType = "work_type"
             case workTime = "work_time"
             case workCost = "work_cost"
+            case workCostWithFormat = "work_cost_with_format"
         }
     }
     

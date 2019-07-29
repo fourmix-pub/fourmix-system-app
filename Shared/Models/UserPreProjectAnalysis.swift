@@ -18,11 +18,13 @@ struct UserPreProjectAnalysis: Codable {
         var userName: String
         var workTime: Double
         var workCost: Int
+        var workCostWithFormat: String
         
         enum CodingKeys: String, CodingKey {
             case userName = "user_name"
             case workTime = "work_time"
             case workCost = "work_cost"
+            case workCostWithFormat = "work_cost_with_format"
         }
     }
     
