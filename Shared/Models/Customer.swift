@@ -11,7 +11,6 @@ import Foundation
 struct Customer: Codable {
     var id: Int
     var attributes: Attributes
-    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -24,10 +23,7 @@ struct Customer: Codable {
             case createdAt = "created_at"
             case updatedAt = "updated_at"
         }
-
     }
-    
-    struct Relationships: Codable {}
     
     struct Links: Codable {
         var `self`: String?

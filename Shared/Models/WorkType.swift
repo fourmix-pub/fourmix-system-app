@@ -11,7 +11,6 @@ import Foundation
 struct WorkType: Codable {
     var id: Int
     var attributes: Attributes
-    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -25,8 +24,6 @@ struct WorkType: Codable {
             case updatedAt = "updated_at"
         }
     }
-    
-    struct Relationships: Codable {}
     
     struct Links: Codable {
         var `self`: String?
