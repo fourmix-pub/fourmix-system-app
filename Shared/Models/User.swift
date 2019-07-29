@@ -52,3 +52,11 @@ struct User: Codable {
 struct UserCollection {
     var data: [User]
 }
+
+struct UserCreator {
+    var name: String?
+    var email: String?
+    var start: String?
+    var end: String?
+    var password: String?
+}
