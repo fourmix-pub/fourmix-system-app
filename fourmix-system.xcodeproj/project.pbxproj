@@ -19,6 +19,11 @@
 		A931998022EA9690003C1F30 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A931997F22EA9690003C1F30 /* SettingsController.swift */; };
 		A93F97DA22E97868007D7004 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F97D922E97868007D7004 /* Login.storyboard */; };
 		A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B6D3622E985C300E1C384 /* LoginController.swift */; };
+		A9622B7E22EE810D001516C3 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9622B7D22EE810D001516C3 /* Project.swift */; };
+		A9622B8022EE8490001516C3 /* WorkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9622B7F22EE8490001516C3 /* WorkType.swift */; };
+		A9622B8822EE88D1001516C3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9622B8722EE88D1001516C3 /* NetworkService.swift */; };
+		A9622B8A22EE8BDF001516C3 /* WorkTypePreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9622B8922EE8BDF001516C3 /* WorkTypePreProjectAnalysis.swift */; };
+		A9622B8E22EE8CCA001516C3 /* UserPreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9622B8D22EE8CCA001516C3 /* UserPreProjectAnalysis.swift */; };
 		A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AC22E99FB000D892AE /* AuthService.swift */; };
 		A9B5A9B022E9A34000D892AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AF22E9A34000D892AE /* Token.swift */; };
 		A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9B122E9A57200D892AE /* NotificationService.swift */; };
@@ -43,6 +48,11 @@
 		A931997F22EA9690003C1F30 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		A93F97D922E97868007D7004 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A94B6D3622E985C300E1C384 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A9622B7D22EE810D001516C3 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		A9622B7F22EE8490001516C3 /* WorkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkType.swift; sourceTree = "<group>"; };
+		A9622B8722EE88D1001516C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A9622B8922EE8BDF001516C3 /* WorkTypePreProjectAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypePreProjectAnalysis.swift; sourceTree = "<group>"; };
+		A9622B8D22EE8CCA001516C3 /* UserPreProjectAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysis.swift; sourceTree = "<group>"; };
 		A9B5A9AC22E99FB000D892AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A9B5A9AF22E9A34000D892AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		A9B5A9B122E9A57200D892AE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -108,11 +118,31 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A9622B8B22EE8BE7001516C3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A9622B8C22EE8BF8001516C3 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A9622B8C22EE8BF8001516C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9622B8922EE8BDF001516C3 /* WorkTypePreProjectAnalysis.swift */,
+				A9622B7D22EE810D001516C3 /* Project.swift */,
+				A9622B7F22EE8490001516C3 /* WorkType.swift */,
+				A9622B8D22EE8CCA001516C3 /* UserPreProjectAnalysis.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A9B5A9AB22E99F7F00D892AE /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				A9B5A9AC22E99FB000D892AE /* AuthService.swift */,
 				A9B5A9B122E9A57200D892AE /* NotificationService.swift */,
+				A9622B8722EE88D1001516C3 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7B42A58B22EE81DE0003B42D /* Shared */,
+				A9622B8B22EE8BE7001516C3 /* Shared */,
 				A9B5A9AE22E9A30E00D892AE /* Models */,
 				A9B5A9AB22E99F7F00D892AE /* Services */,
 				A93F97D822E97823007D7004 /* Controllers */,
@@ -297,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9622B8822EE88D1001516C3 /* NetworkService.swift in Sources */,
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
@@ -306,6 +338,12 @@
 				7B42A58D22EE82140003B42D /* Department.swift in Sources */,
 				7B42A59122EE85990003B42D /* JobType.swift in Sources */,
 				7B42A59322EE86C30003B42D /* User.swift in Sources */,
+				A9622B8A22EE8BDF001516C3 /* WorkTypePreProjectAnalysis.swift in Sources */,
+				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
+				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
+				A9622B7E22EE810D001516C3 /* Project.swift in Sources */,
+				A9622B8022EE8490001516C3 /* WorkType.swift in Sources */,
+				A9622B8E22EE8CCA001516C3 /* UserPreProjectAnalysis.swift in Sources */,
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
