@@ -95,6 +95,11 @@ class DailyViewController: UITableViewController {
         self.endField.text = sender.date.format()
     }
     
+    
+    @IBAction func searchDailies(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

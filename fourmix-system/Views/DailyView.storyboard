@@ -185,6 +185,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="検索"/>
+                                                    <connections>
+                                                        <action selector="searchDailies:" destination="lyi-wI-xba" eventType="touchUpInside" id="YeO-Ik-k3O"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
