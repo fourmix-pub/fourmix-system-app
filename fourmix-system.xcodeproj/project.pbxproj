@@ -11,6 +11,11 @@
 		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
 		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
 		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
+		A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */; };
+		A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */; };
+		A90A9C2822EFEA4B0074B2A8 /* WorkTypeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */; };
+		A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */; };
+		A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2C22F0130D0074B2A8 /* Helpers.swift */; };
 		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
 		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
 		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
@@ -48,6 +53,13 @@
 		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
 		A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSearchController.swift; sourceTree = "<group>"; };
+		A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExtensions.swift; sourceTree = "<group>"; };
+		A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypeSearchController.swift; sourceTree = "<group>"; };
+		A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypeExtensions.swift; sourceTree = "<group>"; };
+		A90A9C2C22F0130D0074B2A8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A90A9C2E22F015F40074B2A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		A90A9C2F22F015F40074B2A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
 		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
 		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
@@ -99,8 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */,
+				A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */,
+				A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */,
 			);
 			path = DailySearchControllers;
+			sourceTree = "<group>";
+		};
+		A90A9C2B22F012EB0074B2A8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A90A9C2C22F0130D0074B2A8 /* Helpers.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 		A93F97D722E97810007D7004 /* Views */ = {
@@ -143,6 +165,8 @@
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
 				A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */,
+				A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */,
+				A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */,
 				CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */,
 			);
 			path = Models;
@@ -222,6 +246,7 @@
 		F2E09A4822E94AF3003808A4 /* fourmix-system */ = {
 			isa = PBXGroup;
 			children = (
+				A90A9C2B22F012EB0074B2A8 /* Supports */,
 				CB4034D922EFCCDF003FD4B5 /* Cells */,
 				A9B5A9AE22E9A30E00D892AE /* Models */,
 				A9B5A9AB22E99F7F00D892AE /* Services */,
@@ -279,6 +304,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F2E09A3D22E94AF3003808A4;
 			productRefGroup = F2E09A4722E94AF3003808A4 /* Products */;
@@ -355,13 +381,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90A9C2822EFEA4B0074B2A8 /* WorkTypeSearchController.swift in Sources */,
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
+				A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */,
 				CB4034E322EFE4B0003FD4B5 /* DailyExtensions.swift in Sources */,
 				CB4034E122EFDBE5003FD4B5 /* DailyController.swift in Sources */,
 				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
 				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
+				A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */,
 				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,
@@ -378,7 +407,9 @@
 				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 				A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */,
+				A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */,
 				A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */,
+				A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +420,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2E09A4E22E94AF3003808A4 /* Base */,
+				A90A9C2E22F015F40074B2A8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -397,6 +429,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2E09A5322E94AF5003808A4 /* Base */,
+				A90A9C2F22F015F40074B2A8 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -408,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -469,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
