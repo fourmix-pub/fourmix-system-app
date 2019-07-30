@@ -31,7 +31,7 @@ enum NetworkService {
 
 extension NetworkService: TargetType {
     
-    var baseURL: URL { return URL(string: "http://fourmix-system.test/api/v1")! }
+    var baseURL: URL { return URL(string: "\(oauthUrl)/api/v1")! }
     
     var path: String {
         switch self {
@@ -145,5 +145,53 @@ private extension String {
     
     var utf8Encoded: Data {
         return data(using: .utf8)!
+    }
+}
+
+class NetworkProvider {
+    static let main = NetworkProvider()
+    
+    let provider = MoyaProvider<NetworkService>()
+    
+    func data(request: NetworkService, callback: @escaping (Data?) -> Void) {
+        provider.request(request) { result in
+            switch result {
+            case let .success(response):
+                
+                do {
+                    _ = try response.filterSuccessfulStatusCodes()
+                    let data = response.data
+                    callback(data)
+                } catch {
+                    switch response.statusCode {
+                    case 401:
+                        NotificationCenter.default.post(name: LocalNotificationService.unauthorized, object: nil, userInfo: [
+                            "code": 401,
+                            "message": "メールアドレスまたはパスワードが間違っています。"
+                            ])
+                        callback(nil)
+                    default:
+                        print(error)
+                        print(response.statusCode)
+                        NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                            "code": response.statusCode,
+                            "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                            ])
+                        callback(nil)
+                    }
+                }
+                
+                break
+            case let .failure(error):
+                print(error)
+                NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                    "code": 999,
+                    "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                    ])
+                callback(nil)
+                break
+            }
+
+        }
     }
 }

@@ -21,7 +21,7 @@ struct User: Codable {
         var cost: Int
         var start: String
         var end: String
-        var isResignation: Bool
+        var isResignation: Int
         var createdAt: String
         var updatedAt: String
         
@@ -49,7 +49,7 @@ struct User: Codable {
     
 }
 
-struct UserCollection {
+struct UserCollection: Codable {
     var data: [User]
 }
 
