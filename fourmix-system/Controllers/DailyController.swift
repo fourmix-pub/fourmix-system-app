@@ -92,6 +92,9 @@ class DailyController: UITableViewController {
         return true
     }
     */
+    
+    @IBAction func unwindToDailyList(unwindSngue: UIStoryboardSegue) {
+    }
 
     /*
     // MARK: - Navigation

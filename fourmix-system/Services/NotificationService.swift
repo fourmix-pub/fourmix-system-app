@@ -14,4 +14,6 @@ struct LocalNotificationService {
     static let userHasSelected = Notification.Name("userHasSelected")
     static let projectHasSelected = Notification.Name("projectHasSelected")
     static let workTypeHasSelected = Notification.Name("workTypeHasSelected")
+    static let jobTypeHasSelected = Notification.Name("jobTypeHasSelected")
+    static let dailyHasCreated = Notification.Name("dailyHasCreated")
 }

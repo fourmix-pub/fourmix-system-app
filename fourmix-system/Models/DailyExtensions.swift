@@ -23,3 +23,39 @@ extension DailyCollection {
     }
 }
 
+extension DailyCreator {
+    func create(callback: @escaping (DailyCollection?) -> Void) {
+        NetworkProvider.main.data(request: .dailyCreate(dailyCreator: self)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let dailyCollection = try! coder.decode(DailyCollection.self, from: data)
+                callback(dailyCollection)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+    
+    func update(callback: @escaping (DailyCollection?) -> Void) {
+        NetworkProvider.main.data(request: .dailyUpdate(dailyCreator: self)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let dailyCollection = try! coder.decode(DailyCollection.self, from: data)
+                callback(dailyCollection)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+    
+    func delete(callback: @escaping (Bool?) -> Void) {
+        NetworkProvider.main.data(request: .dailyDelete(dailyCreator: self)) { (data) in
+            if let data = data {
+                
+                callback(true)
+            } else {
+                callback(false)
+            }
+        }
+    }
+}
