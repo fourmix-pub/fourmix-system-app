@@ -173,6 +173,7 @@ class NetworkProvider {
                     default:
                         print(error)
                         print(response.statusCode)
+                        print(String(data: response.data, encoding: .utf8))
                         NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
                             "code": response.statusCode,
                             "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
