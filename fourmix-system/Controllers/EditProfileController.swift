@@ -21,9 +21,16 @@ class EditProfileController: UITableViewController {
         nameField.text = user.attributes.name
         emailField.text = user.attributes.email
     }
-    
-    @IBAction func UpdateButtonHasTapped(_ sender: Any) {
+       
+    @IBAction func updateButtonHasTapped(_ sender: Any) {
+        let userCreator  = UserCreator(name: nameField.text, password: nil, passwordConform: nil)
         
+        userCreator.updateProfile { (userData) in
+            if let userData = userData {
+                NotificationCenter.default.post(name: LocalNotificationService.profileHasUpdated, object: nil, userInfo: ["user": userData.data])
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     // MARK: - Table view data source

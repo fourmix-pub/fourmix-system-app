@@ -21,7 +21,7 @@
                         <sections>
                             <tableViewSection headerTitle="アカウント設定" id="YE2-rc-IBv">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kb8-A9-UVq" imageView="Wnz-ml-v10" style="IBUITableViewCellStyleDefault" id="eFQ-b2-PyY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kb8-A9-UVq" detailTextLabel="PoU-5f-lUn" imageView="Wnz-ml-v10" style="IBUITableViewCellStyleValue1" id="eFQ-b2-PyY">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFQ-b2-PyY" id="BFc-Vb-079">
@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="プロフィール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kb8-A9-UVq">
-                                                    <rect key="frame" x="65" y="0.0" width="311" height="43.5"/>
+                                                    <rect key="frame" x="65" y="12" width="104" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -39,12 +39,16 @@
                                                     <rect key="frame" x="20" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Loading..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PoU-5f-lUn">
+                                                    <rect key="frame" x="301" y="12" width="75" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="brand"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="nms-2d-yzH" kind="show" id="h61-Wr-a0x"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S9P-al-Y6o" imageView="iwD-XC-CIb" style="IBUITableViewCellStyleDefault" id="8mB-AY-oYM">
                                         <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
@@ -68,7 +72,7 @@
                                             <color key="tintColor" name="brand"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="EVW-xG-djt" kind="show" id="uK8-r1-eBf"/>
+                                            <segue destination="EVW-xG-djt" kind="show" identifier="ResetPasswordSegue" id="uK8-r1-eBf"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -106,6 +110,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="設定" id="qjn-YF-ZTc"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="PoU-5f-lUn" id="gJE-SE-OYn"/>
+                        <segue destination="nms-2d-yzH" kind="show" identifier="EditProfileSegue" id="dGP-eL-Ehx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQu-LS-8hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +130,7 @@
                         <sections>
                             <tableViewSection id="4BX-HQ-fFH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nmw-Mw-BfB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nmw-Mw-BfB">
                                         <rect key="frame" x="0.0" y="35" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nmw-Mw-BfB" id="IBT-s6-Atn">
@@ -154,7 +162,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oPH-NR-90M">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="oPH-NR-90M">
                                         <rect key="frame" x="0.0" y="79" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oPH-NR-90M" id="8Sk-B1-jfH">
@@ -170,9 +178,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PG1-Ba-aCg">
+                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PG1-Ba-aCg">
                                                     <rect key="frame" x="146" y="13.5" width="268" height="17"/>
-                                                    <color key="textColor" name="brand"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -197,7 +205,7 @@
                     <navigationItem key="navigationItem" title="プロフィール設定" id="5al-m3-c6D">
                         <barButtonItem key="rightBarButtonItem" title="更新" id="0e9-QM-4g9">
                             <connections>
-                                <action selector="UpdateButtonHasTapped:" destination="nms-2d-yzH" id="Rye-ln-dHm"/>
+                                <action selector="updateButtonHasTapped:" destination="nms-2d-yzH" id="lOs-80-De3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -213,7 +221,7 @@
         <!--パスワード変更-->
         <scene sceneID="jKD-UE-cR2">
             <objects>
-                <tableViewController id="EVW-xG-djt" sceneMemberID="viewController">
+                <tableViewController id="EVW-xG-djt" customClass="ResetPasswordController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Juc-Ny-Mmp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,6 +307,11 @@
                     <navigationItem key="navigationItem" title="パスワード変更" id="bwW-fh-ilZ">
                         <barButtonItem key="rightBarButtonItem" title="変更" id="hJD-UJ-CiY"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmPassword" destination="A6o-gU-kCL" id="lL1-GX-udN"/>
+                        <outlet property="newPassword" destination="ujk-gH-54C" id="dKS-eM-9vc"/>
+                        <outlet property="oldPassword" destination="yKn-8z-Mzx" id="rtq-4Z-9FA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bw-Kx-N1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

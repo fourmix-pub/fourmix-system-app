@@ -88,7 +88,6 @@ extension NetworkService: TargetType {
         case let .userUpdate(userCreator):
             return .requestParameters(parameters: [
                 "name": userCreator.name as Any,
-                "email": userCreator.email as Any,
                 "password": userCreator.password as Any,
                 "password_conform": userCreator.passwordConform as Any
                 ], encoding: JSONEncoding.default)

@@ -49,13 +49,16 @@ struct User: Codable {
     
 }
 
+struct UserData: Codable {
+    var data: User
+}
+
 struct UserCollection: Codable {
     var data: [User]
 }
 
 struct UserCreator {
     var name: String?
-    var email: String?
     var password: String?
     var passwordConform: String?
 }

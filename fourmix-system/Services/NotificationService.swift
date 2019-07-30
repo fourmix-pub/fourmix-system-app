@@ -12,4 +12,5 @@ struct LocalNotificationService {
     static let unauthorized = Notification.Name("unauthorized")
     static let networkError = Notification.Name("networkError")
     static let userHasSelected = Notification.Name("userHasSelected")
+    static let profileHasUpdated = Notification.Name("profileHasUpdated")
 }
