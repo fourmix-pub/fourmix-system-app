@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */; };
+		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
+		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
+		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
 		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
 		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
 		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
 		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
+		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
+		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
+		A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
 		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
 		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
@@ -83,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90A9C1C22EFD37B0074B2A8 /* DailySearchControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */,
+			);
+			path = DailySearchControllers;
+			sourceTree = "<group>";
+		};
 		A93F97D722E97810007D7004 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +113,10 @@
 		A93F97D822E97823007D7004 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A90A9C1C22EFD37B0074B2A8 /* DailySearchControllers */,
 				A94B6D3622E985C300E1C384 /* LoginController.swift */,
 				A931997F22EA9690003C1F30 /* SettingsController.swift */,
+				A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
+				A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,12 +344,15 @@
 				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
 				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
+				A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */,
 				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
 				A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */,
+				A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */,
 				A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */,
 				A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */,
 				A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */,
+				A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */,
 				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
 				A9FF3E2822EEAF49009F86B3 /* Department.swift in Sources */,
 				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
