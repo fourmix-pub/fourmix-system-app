@@ -71,9 +71,6 @@
                                             </subviews>
                                             <color key="tintColor" name="brand"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="EVW-xG-djt" kind="show" identifier="ResetPasswordSegue" id="uK8-r1-eBf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -113,6 +110,7 @@
                     <connections>
                         <outlet property="userNameLabel" destination="PoU-5f-lUn" id="gJE-SE-OYn"/>
                         <segue destination="nms-2d-yzH" kind="show" identifier="EditProfileSegue" id="dGP-eL-Ehx"/>
+                        <segue destination="EVW-xG-djt" kind="show" identifier="ResetPasswordSegue" id="Us0-3v-7p7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQu-LS-8hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,7 +303,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="パスワード変更" id="bwW-fh-ilZ">
-                        <barButtonItem key="rightBarButtonItem" title="変更" id="hJD-UJ-CiY"/>
+                        <barButtonItem key="rightBarButtonItem" title="変更" id="hJD-UJ-CiY">
+                            <connections>
+                                <action selector="resetButtonHasTapped:" destination="EVW-xG-djt" id="e0E-Wh-hRg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmPassword" destination="A6o-gU-kCL" id="lL1-GX-udN"/>

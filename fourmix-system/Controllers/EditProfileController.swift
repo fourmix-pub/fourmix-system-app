@@ -23,7 +23,7 @@ class EditProfileController: UITableViewController {
     }
        
     @IBAction func updateButtonHasTapped(_ sender: Any) {
-        let userCreator  = UserCreator(name: nameField.text, password: nil, passwordConform: nil)
+        let userCreator  = UserCreator(name: nameField.text, oldPassword: nil, password: nil, passwordConform: nil)
         
         userCreator.updateProfile { (userData) in
             if let userData = userData {

@@ -10,6 +10,7 @@
 		4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */; };
 		7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */; };
 		7B166D9F22F011DA002FEF1A /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */; };
+		7B166DA122F0429B002FEF1A /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166DA022F0429B002FEF1A /* Systems.swift */; };
 		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
 		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
 		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
@@ -47,6 +48,7 @@
 		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
 		7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
+		7B166DA022F0429B002FEF1A /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
 		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
 		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				A9FF3E2422EEAF49009F86B3 /* WorkType.swift */,
 				A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */,
 				A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */,
+				7B166DA022F0429B002FEF1A /* Systems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B166DA122F0429B002FEF1A /* Systems.swift in Sources */,
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,

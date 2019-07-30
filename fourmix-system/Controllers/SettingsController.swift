@@ -34,6 +34,9 @@ class SettingsController: UITableViewController {
         if let user = self.user, indexPath.row == 0 && indexPath.section == 0 {
             self.performSegue(withIdentifier: "EditProfileSegue", sender: user)
         }
+        if let user = self.user, indexPath.row == 1 && indexPath.section == 0 {
+            self.performSegue(withIdentifier: "ResetPasswordSegue", sender: user)
+        }
         
         if indexPath.section == 1 && indexPath.row == 0 {
             let actionSheet = UIAlertController(title: nil, message: "ログアウトしますか？", preferredStyle: .actionSheet)
@@ -66,6 +69,27 @@ class SettingsController: UITableViewController {
             self.user = user as? User
             self.userNameLabel.text = self.user?.attributes.name
         }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.passwordHasReset, object: nil, queue: nil) { (notification) in
+            guard let user = notification.userInfo!["user"] else { return }
+            
+            self.user = user as? User
+            self.userNameLabel.text = self.user?.attributes.name
+        }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.inputError, object: nil, queue: nil) { (notification) in
+            guard let message = notification.userInfo!["message"] else { return }
+            
+            let alert = UIAlertController(title: "エラーです", message: message as? String, preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+                alert.dismiss(animated: true)
+            })
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true)
+        }
     }
 
     // MARK: - Navigation
@@ -74,6 +98,10 @@ class SettingsController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditProfileSegue" {
             let destination = segue.destination as! EditProfileController
+            destination.user = sender as? User
+        }
+        if segue.identifier == "ResetPasswordSegue" {
+            let destination = segue.destination as! ResetPasswordController
             destination.user = sender as? User
         }
     }

@@ -59,6 +59,7 @@ struct UserCollection: Codable {
 
 struct UserCreator {
     var name: String?
+    var oldPassword: String?
     var password: String?
     var passwordConform: String?
 }

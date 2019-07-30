@@ -23,13 +23,18 @@ class ResetPasswordController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
     @IBAction func resetButtonHasTapped(_ sender: Any) {
+        let userCreator = UserCreator(name: nil, oldPassword: oldPassword.text, password: newPassword.text, passwordConform: confirmPassword.text)
+        
+            userCreator.updateProfile { (userData) in
+                if let userData = userData {
+                NotificationCenter.default.post(name: LocalNotificationService.passwordHasReset, object: nil, userInfo: ["user": userData.data])
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
-    
-
-  
-
     /*
     // MARK: - Navigation
 
