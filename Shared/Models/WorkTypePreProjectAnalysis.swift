@@ -11,23 +11,20 @@ import Foundation
 struct WorkTypePreProjectAnalysis: Codable {
     var id: Int
     var attributes: Attributes
-    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
         var workType: String
         var workTime: Double
         var workCost: Int
+        var workCostWithFormat: String
         
         enum CodingKeys: String, CodingKey {
             case workType = "work_type"
             case workTime = "work_time"
             case workCost = "work_cost"
+            case workCostWithFormat = "work_cost_with_format"
         }
-    }
-    
-    struct Relationships: Codable {
-        var project: Project
     }
     
     struct Links: Codable {

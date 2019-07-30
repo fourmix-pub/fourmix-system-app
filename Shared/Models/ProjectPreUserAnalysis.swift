@@ -11,7 +11,6 @@ import Foundation
 struct ProjectPreUserAnalysis: Codable {
     var id: Int
     var attributes: Attributes
-    var relationships: Relationships
     var links: Links
     
     struct Attributes: Codable {
@@ -19,17 +18,15 @@ struct ProjectPreUserAnalysis: Codable {
         var projectName: String
         var workTime: Double
         var workCost: Int
+        var workCostWithFormat: String
         
         enum CodingKeys:String, CodingKey {
             case customerName = "customer_name"
             case projectName = "project_name"
             case workTime = "work_time"
             case workCost = "work_cost"
+            case workCostWithFormat = "work_cost_with_format"
         }
-    }
-    
-    struct Relationships: Codable {
-        var user: User
     }
     
     struct Links: Codable {
