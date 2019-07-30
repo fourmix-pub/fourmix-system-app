@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Daily Controller-->
         <scene sceneID="bqx-81-UEl">
             <objects>
-                <tableViewController id="wmE-I4-DID" sceneMemberID="viewController">
+                <tableViewController id="wmE-I4-DID" customClass="DailyController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wYF-Az-a9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyCell" rowHeight="392" id="iLn-6Q-pC8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyCell" rowHeight="392" id="iLn-6Q-pC8" customClass="DailyCell" customModule="fourmix_system" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="392"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLn-6Q-pC8" id="TB8-60-1xi">
@@ -209,6 +209,15 @@
                                         <constraint firstAttribute="bottom" secondItem="Q8W-kJ-gtH" secondAttribute="bottom" constant="16" id="bho-Rs-Jne"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="JLC-mG-Rqc" id="MWB-gy-vf9"/>
+                                    <outlet property="jobTypeLabel" destination="2o8-eX-gAa" id="B0U-xG-uPA"/>
+                                    <outlet property="noteLabel" destination="mNx-QA-U5a" id="INb-4g-PWt"/>
+                                    <outlet property="projectNameLabel" destination="1LR-us-36l" id="ENI-4l-Rq7"/>
+                                    <outlet property="restTimeLabel" destination="BDz-MK-UhV" id="1k2-6R-pkt"/>
+                                    <outlet property="workTimeLabel" destination="Hoe-Hh-kPD" id="PCN-tQ-07w"/>
+                                    <outlet property="workTypeLabel" destination="Vlt-FO-pHc" id="bqW-oV-lCe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
