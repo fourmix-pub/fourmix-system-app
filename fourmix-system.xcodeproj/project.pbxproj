@@ -11,6 +11,8 @@
 		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
 		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
 		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
+		A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */; };
+		A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */; };
 		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
 		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
 		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
@@ -45,7 +47,9 @@
 		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
 		A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
-		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
+		A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSearchController.swift; sourceTree = "<group>"; };
+		A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExtensions.swift; sourceTree = "<group>"; };
+		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
 		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
 		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
 		A931997B22EA8C1B003C1F30 /* Analytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Analytics.storyboard; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */,
+				A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */,
 			);
 			path = DailySearchControllers;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
 				A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */,
+				A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,8 +347,10 @@
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
+				A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */,
 				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
 				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
+				A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */,
 				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,

@@ -11,8 +11,10 @@ import UIKit
 class DailyViewController: UITableViewController {
     
     var user: User?
+    var project: Project?
 
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var projectNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,16 @@ class DailyViewController: UITableViewController {
             
             if let user = self.user {
                 self.userNameLabel.text = user.attributes.name
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.projectHasSelected, object: nil, queue: nil) { (notification) in
+            guard let project = notification.userInfo!["project"] else { return }
+            
+            self.project = project as? Project
+            
+            if let project = self.project {
+                self.projectNameLabel.text = project.attributes.name
             }
         }
     }

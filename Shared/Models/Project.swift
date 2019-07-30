@@ -54,6 +54,6 @@ struct Project: Codable {
     }
 }
 
-struct ProjectCollection {
+struct ProjectCollection: Codable {
     var data: [Project]
 }
