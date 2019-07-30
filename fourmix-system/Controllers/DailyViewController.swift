@@ -24,7 +24,6 @@ class DailyViewController: UITableViewController {
         super.viewDidLoad()
         setDatePicker()
         observes()
-        
         self.tableView.keyboardDismissMode = .onDrag
     }
     
@@ -112,6 +111,19 @@ class DailyViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func clearButtonHasTapped(_ sender: Any) {
+        self.user = nil
+        self.project = nil
+        self.workType = nil
+        self.startField.text = nil
+        self.endField.text = nil
+        self.userNameLabel.text = "選択してください"
+        self.projectNameLabel.text = "選択してください"
+        self.workTypeNameLabel.text = "選択してください"
+    }
+    
+    
     
     // MARK: - Navigation
 

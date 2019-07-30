@@ -175,24 +175,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-mb-TO4">
-                                                    <rect key="frame" x="167" y="20" width="80" height="40"/>
-                                                    <color key="backgroundColor" name="brand-black"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="9ry-z9-G2q"/>
-                                                        <constraint firstAttribute="width" constant="80" id="ixC-Kv-ebI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="検索"/>
-                                                    <connections>
-                                                        <action selector="searchDailies:" destination="lyi-wI-xba" eventType="touchUpInside" id="YeO-Ik-k3O"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-gt-VfW">
+                                                    <rect key="frame" x="107" y="20" width="200" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-GP-dnT">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                            <color key="backgroundColor" name="brand-black"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Mwt-ES-KY5"/>
+                                                                <constraint firstAttribute="height" constant="40" id="YjE-An-sGP"/>
+                                                                <constraint firstAttribute="width" constant="80" id="bnG-ir-z7d"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wFB-f4-e5x"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="クリア"/>
+                                                            <connections>
+                                                                <action selector="clearButtonHasTapped:" destination="lyi-wI-xba" eventType="touchUpInside" id="hsM-kH-ElW"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-mb-TO4">
+                                                            <rect key="frame" x="120" y="0.0" width="80" height="40"/>
+                                                            <color key="backgroundColor" name="brand-black"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="41x-Rq-FlQ"/>
+                                                                <constraint firstAttribute="width" constant="80" id="nR6-if-jIL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="検索"/>
+                                                            <connections>
+                                                                <action selector="searchDailies:" destination="lyi-wI-xba" eventType="touchUpInside" id="YeO-Ik-k3O"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6X5-mb-TO4" firstAttribute="centerX" secondItem="DwU-Uv-Wcp" secondAttribute="centerX" id="VeF-EX-x0V"/>
-                                                <constraint firstItem="6X5-mb-TO4" firstAttribute="centerY" secondItem="DwU-Uv-Wcp" secondAttribute="centerY" id="j39-1R-yQq"/>
+                                                <constraint firstItem="VGg-gt-VfW" firstAttribute="centerX" secondItem="DwU-Uv-Wcp" secondAttribute="centerX" id="CJF-5n-g0j"/>
+                                                <constraint firstItem="VGg-gt-VfW" firstAttribute="centerY" secondItem="DwU-Uv-Wcp" secondAttribute="centerY" id="rIr-MY-OR7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
