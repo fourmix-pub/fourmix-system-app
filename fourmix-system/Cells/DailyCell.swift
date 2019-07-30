@@ -10,6 +10,8 @@ import UIKit
 
 class DailyCell: UITableViewCell {
     
+    @IBOutlet weak var dailyCardView: UIView!
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var workTypeLabel: UILabel!
@@ -21,6 +23,10 @@ class DailyCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        dailyCardView.layer.borderWidth = 1
+        dailyCardView.layer.borderColor = UIColor(named: "brand-blue")?.cgColor
+        dailyCardView.layer.cornerRadius = 8
+        dailyCardView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

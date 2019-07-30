@@ -35,6 +35,7 @@
 		A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */; };
 		CB4034DF22EFCE62003FD4B5 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */; };
 		CB4034E122EFDBE5003FD4B5 /* DailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E022EFDBE5003FD4B5 /* DailyController.swift */; };
+		CB4034E322EFE4B0003FD4B5 /* DailyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 		CB4034E022EFDBE5003FD4B5 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
+		CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExtensions.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
 				A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */,
+				CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
+				CB4034E322EFE4B0003FD4B5 /* DailyExtensions.swift in Sources */,
 				CB4034E122EFDBE5003FD4B5 /* DailyController.swift in Sources */,
 				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
 				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
