@@ -12,9 +12,11 @@ class DailyViewController: UITableViewController {
     
     var user: User?
     var project: Project?
+    var workType: WorkType?
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var projectNameLabel: UILabel!
+    @IBOutlet weak var workTypeNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,16 @@ class DailyViewController: UITableViewController {
             
             if let project = self.project {
                 self.projectNameLabel.text = project.attributes.name
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.workTypeHasSelected, object: nil, queue: nil) { (notification) in
+            guard let workType = notification.userInfo!["workType"] else { return }
+            
+            self.workType = workType as? WorkType
+            
+            if let workType = self.workType {
+                self.workTypeNameLabel.text = workType.attributes.name
             }
         }
     }

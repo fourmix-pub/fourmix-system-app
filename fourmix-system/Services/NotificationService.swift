@@ -13,4 +13,5 @@ struct LocalNotificationService {
     static let networkError = Notification.Name("networkError")
     static let userHasSelected = Notification.Name("userHasSelected")
     static let projectHasSelected = Notification.Name("projectHasSelected")
+    static let workTypeHasSelected = Notification.Name("workTypeHasSelected")
 }
