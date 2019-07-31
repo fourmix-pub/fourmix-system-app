@@ -1,24 +1,24 @@
 //
-//  DailyCell.swift
+//  DailyViewCell.swift
 //  fourmix-system
 //
-//  Created by 石原比希 on 2019/07/30.
+//  Created by 森雄大 on 2019/07/30.
 //  Copyright © 2019 Fourmix. All rights reserved.
 //
 
 import UIKit
 
-class DailyCell: UITableViewCell {
-    
+class DailyViewCell: UITableViewCell {
+
     @IBOutlet weak var dailyCardView: UIView!
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var projectNameLabel: UILabel!
+    @IBOutlet weak var customerNameLabel: UILabel!
     @IBOutlet weak var workTypeLabel: UILabel!
     @IBOutlet weak var workTimeLabel: UILabel!
-    @IBOutlet weak var restTimeLabel: UILabel!
-    @IBOutlet weak var jobTypeLabel: UILabel!
-    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,10 +38,11 @@ class DailyCell: UITableViewCell {
     func update(daily: Daily) {
         dateLabel.text = daily.attributes.date
         projectNameLabel.text = daily.relationships.project.attributes.name
+        customerNameLabel.text = daily.relationships.project.relationships.customer.attributes.name
         workTypeLabel.text = daily.relationships.workType.attributes.name
-        workTimeLabel.text = "\(daily.attributes.start)~\(daily.attributes.end)"
-        restTimeLabel.text = "\(daily.attributes.rest ?? 0)分"
-        jobTypeLabel.text = daily.relationships.jobType.attributes.name
-        noteLabel.text = daily.attributes.note
+        workTimeLabel.text = daily.attributes.time.description
+        userNameLabel.text = daily.relationships.user.attributes.name
+        costLabel.text = daily.attributes.cost.description
     }
+
 }
