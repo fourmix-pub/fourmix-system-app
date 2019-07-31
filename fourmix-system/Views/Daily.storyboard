@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Daily Controller-->
+        <!--日報-->
         <scene sceneID="bqx-81-UEl">
             <objects>
                 <tableViewController id="wmE-I4-DID" customClass="DailyController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wYF-Az-a9g">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wYF-Az-a9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -22,12 +22,12 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailyCell" rowHeight="392" id="iLn-6Q-pC8" customClass="DailyCell" customModule="fourmix_system" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="392"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLn-6Q-pC8" id="TB8-60-1xi">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="391.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLn-6Q-pC8" id="TB8-60-1xi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8W-kJ-gtH" userLabel="DailyCard">
-                                            <rect key="frame" x="16" y="16.5" width="382" height="360"/>
+                                            <rect key="frame" x="16" y="16" width="382" height="360"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDe-bw-ai9" userLabel="Banar">
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -39,7 +39,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="brand-blue"/>
+                                                    <color key="backgroundColor" name="brand"/>
                                                     <constraints>
                                                         <constraint firstItem="JLC-mG-Rqc" firstAttribute="leading" secondItem="XDe-bw-ai9" secondAttribute="leading" constant="4" id="1ET-He-NpW"/>
                                                         <constraint firstAttribute="trailing" secondItem="JLC-mG-Rqc" secondAttribute="trailing" constant="4" id="3L9-tA-CW5"/>
@@ -227,7 +227,7 @@
                             <outlet property="delegate" destination="wmE-I4-DID" id="l5j-MO-Dmj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Fe5-Ar-sNx">
+                    <navigationItem key="navigationItem" title="日報" id="Fe5-Ar-sNx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fh3-iB-yHq">
                             <connections>
                                 <segue destination="6zg-cC-DPb" kind="presentation" id="Ylq-Bm-n5j"/>
@@ -242,7 +242,7 @@
             </objects>
             <point key="canvasLocation" x="1226" y="167"/>
         </scene>
-        <!--Create Daily Controller-->
+        <!--日報作成-->
         <scene sceneID="UqU-J7-GGq">
             <objects>
                 <tableViewController id="oMI-DZ-g1s" customClass="CreateDailyController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -509,13 +509,13 @@
                             <outlet property="delegate" destination="oMI-DZ-g1s" id="AiC-b9-R4g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KHS-89-Oa8">
+                    <navigationItem key="navigationItem" title="日報作成" id="KHS-89-Oa8">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="Thh-qb-7su">
                             <connections>
-                                <segue destination="Tug-ip-NQr" kind="unwind" unwindAction="unwindToDailyListWithUnwindSngue:" id="B94-Or-N7i"/>
+                                <segue destination="Tug-ip-NQr" kind="unwind" identifier="UnwindToDailyList" unwindAction="unwindToDailyListWithUnwindSngue:" id="B94-Or-N7i"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="f1F-cr-4gN">
+                        <barButtonItem key="rightBarButtonItem" title="作成" id="f1F-cr-4gN">
                             <connections>
                                 <action selector="saveButtonHasTapped:" destination="oMI-DZ-g1s" id="fJN-Fr-yEw"/>
                             </connections>
@@ -686,7 +686,7 @@
             </objects>
             <point key="canvasLocation" x="855" y="1623"/>
         </scene>
-        <!--Edit Daily Controller-->
+        <!--日報編集-->
         <scene sceneID="cS3-j7-sIz">
             <objects>
                 <tableViewController id="HEu-4X-74j" customClass="EditDailyController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -953,15 +953,15 @@
                             <outlet property="delegate" destination="HEu-4X-74j" id="5Eo-DG-pp7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="m2J-rn-4sp">
+                    <navigationItem key="navigationItem" title="日報編集" id="m2J-rn-4sp">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="X8I-sy-lGw">
                             <connections>
-                                <segue destination="yoq-fS-N9G" kind="unwind" unwindAction="unwindToDailyListWithUnwindSngue:" id="ceT-Ie-w8Z"/>
+                                <segue destination="yoq-fS-N9G" kind="unwind" identifier="UnwindToDailyListFromEditView" unwindAction="unwindToDailyListWithUnwindSngue:" id="4YZ-0Z-thK"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="abz-aN-kaF">
+                        <barButtonItem key="rightBarButtonItem" title="更新" id="abz-aN-kaF">
                             <connections>
-                                <action selector="UpdateButtonHasTapped:" destination="HEu-4X-74j" id="0TR-Jg-NVd"/>
+                                <action selector="updateButtonHasTapped:" destination="HEu-4X-74j" id="H2b-aW-VZo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1115,9 +1115,6 @@
         <image name="daily-25" width="25" height="25"/>
         <namedColor name="brand">
             <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="brand-blue">
-            <color red="0.0" green="0.43900001049041748" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

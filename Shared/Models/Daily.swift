@@ -69,6 +69,10 @@ struct DailyCollection: Codable {
     var data: [Daily]
 }
 
+struct DailyData: Codable {
+    var data: Daily
+}
+
 struct DailyCreator {
     var id: Int?
     var workTypeId: Int?

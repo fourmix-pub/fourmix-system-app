@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class EditDailyController: UITableViewController {
     
@@ -14,6 +15,10 @@ class EditDailyController: UITableViewController {
     var project: Project?
     var workType: WorkType?
     var jobType: JobType?
+    
+    var projects: [Project] = []
+    var workTypes: [WorkType] = []
+    var jobTypes: [JobType] = []
     
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var projectNameLabel: UILabel!
@@ -26,29 +31,61 @@ class EditDailyController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateField.text = daily.attributes.date
-        projectNameLabel.text = daily.relationships.project.attributes.name
-        workTypeNameLabel.text = daily.relationships.workType.attributes.name
-        startField.text = daily.attributes.start
-        endField.text = daily.attributes.end
-//        restTimeField.text = daily.attributes.rest
-        jobTypeNameLabel.text = daily.relationships.jobType.attributes.name
-        noteView.text = daily.attributes.note
-        
-        setup()
+        loadData()
+        updateUI()
         setDatePicker()
         observes()
         
         tableView.keyboardDismissMode = .onDrag
     }
     
-    func setup() {
-        let now = Date()
-        dateField.text = now.format()
-        startField.text = now.format("HH:mm")
-        endField.text = now.format("HH:mm")
+    func loadData() {
+        KRProgressHUD.show()
+        
+        DispatchQueue.main.async {
+            ProjectCollection.load { (projectCollection) in
+                if let projectCollection = projectCollection {
+                    self.projects = projectCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.jobTypes.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+            
+            WorkTypeCollection.load { (workTypeCollection) in
+                if let workTypeCollection = workTypeCollection {
+                    self.workTypes = workTypeCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.jobTypes.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+            
+            JobTypeCollection.load { (jobTypeCollection) in
+                if let jobTypeCollection = jobTypeCollection {
+                    self.jobTypes = jobTypeCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.jobTypes.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+        }
     }
     
+    func updateUI() {
+        dateField.text = Date.createFromFormat(string: daily.attributes.date, format: "yyyy-MM-dd HH:mm:ss")?.format("yyyy-MM-dd")
+        projectNameLabel.text = daily.relationships.project.attributes.name
+        workTypeNameLabel.text = daily.relationships.workType.attributes.name
+        startField.text = Date.createFromFormat(string: daily.attributes.start, format: "HH:mm:ss")?.format("HH:mm")
+        endField.text = Date.createFromFormat(string: daily.attributes.end, format: "HH:mm:ss")?.format("HH:mm")
+        restTimeField.text = daily.attributes.rest?.description
+        jobTypeNameLabel.text = daily.relationships.jobType.attributes.name
+        noteView.text = daily.attributes.note
+        project = daily.relationships.project
+        workType = daily.relationships.workType
+        jobType = daily.relationships.jobType
+    }
+
     // プロジェクト、作業分類、勤務分類を選択
     func observes() {
         NotificationCenter.default.addObserver(forName: LocalNotificationService.projectHasSelected, object: nil, queue: nil) { (notification) in
@@ -80,6 +117,20 @@ class EditDailyController: UITableViewController {
                 self.jobTypeNameLabel.text = jobType.attributes.name
             }
         }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.inputError, object: nil, queue: nil) { (notification) in
+            guard let message = notification.userInfo!["message"] else { return }
+            
+            let alert = UIAlertController(title: "エラーです", message: message as? String, preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+                alert.dismiss(animated: true)
+            })
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true)
+        }
     }
     
     // 日付・時間入力
@@ -88,7 +139,7 @@ class EditDailyController: UITableViewController {
         self.startField.addTarget(self, action: #selector(self.startTimeEditing), for: .editingDidBegin)
         self.endField.addTarget(self, action: #selector(self.endTimeEditing), for: .editingDidBegin)
     }
-    //日付
+    
     @objc func dateEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .date
@@ -99,7 +150,7 @@ class EditDailyController: UITableViewController {
         
         datePickerView.addTarget(self, action: #selector(self.setDateFieldDate), for: .valueChanged)
     }
-    //開始時刻
+    
     @objc func startTimeEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .time
@@ -110,7 +161,7 @@ class EditDailyController: UITableViewController {
         
         datePickerView.addTarget(self, action: #selector(self.setStartFieldDate), for: .valueChanged)
     }
-    //終了時刻
+
     @objc func endTimeEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .time
@@ -134,25 +185,48 @@ class EditDailyController: UITableViewController {
         self.endField.text = sender.date.format("HH:mm")
     }
     
-    //完了ボタン
-    @IBAction func UpdateButtonHasTapped(_ sender: Any) {
-        let dailyCreator = DailyCreator(id: nil, workTypeId: workType?.id, jobTypeId: jobType?.id, projectId: project?.id, date: dateField.text, start: startField.text, end: endField.text, rest: nil, note: noteView.text)
+    // 更新ボタン
+    @IBAction func updateButtonHasTapped(_ sender: Any) {
+        KRProgressHUD.show()
+        let dailyCreator = DailyCreator(id: daily.id,
+                                        workTypeId: workType?.id,
+                                        jobTypeId: jobType?.id,
+                                        projectId: project?.id,
+                                        date: dateField.text,
+                                        start: startField.text,
+                                        end: endField.text,
+                                        rest: Int(restTimeField.text ?? ""),
+                                        note: noteView.text)
         
         dailyCreator.dailyUpdate { (daily) in
+            KRProgressHUD.dismiss()
             if let daily = daily {
                 NotificationCenter.default.post(name: LocalNotificationService.dailyHasUpdated, object: nil, userInfo: ["daily": daily])
-                self.performSegue(withIdentifier: "UnwindToDailyList", sender: self)
+                self.performSegue(withIdentifier: "UnwindToDailyListFromEditView", sender: self)
             }
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "ProjectNameSegue":
+            let destination = segue.destination as! ProjectSearchController
+            destination.projects = self.projects
+            break
+        case "WorkTypeSegue":
+            let destination = segue.destination as! WorkTypeSearchController
+            destination.workTypes = self.workTypes
+            break
+        case "JobTypeSegue":
+            let destination = segue.destination as! JobTypeSearchController
+            destination.jobTypes = self.jobTypes
+            break
+        default:
+            break
+        }
     }
-    */
 }

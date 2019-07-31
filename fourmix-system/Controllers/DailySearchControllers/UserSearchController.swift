@@ -10,20 +10,10 @@ import UIKit
 
 class UserSearchController: UITableViewController {
     
-    var users: [User] = []
+    var users: [User]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-    }
-    
-    func loadData() {
-        UserCollection.load { (userCollection) in
-            if let userCollection = userCollection {
-                self.users = userCollection.data
-                self.tableView.reloadData()
-            }
-        }
     }
 
     // MARK: - Table view data source

@@ -10,20 +10,10 @@ import UIKit
 
 class ProjectSearchController: UITableViewController {
     
-    var projects: [Project] = []
+    var projects: [Project]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-    }
-    
-    func loadData() {
-        ProjectCollection.load { (projectCollection) in
-            if let projectCollection = projectCollection {
-                self.projects = projectCollection.data
-                self.tableView.reloadData()
-            }
-        }
     }
 
     // MARK: - Table view data source

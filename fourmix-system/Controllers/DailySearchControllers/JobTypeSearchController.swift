@@ -10,20 +10,10 @@ import UIKit
 
 class JobTypeSearchController: UITableViewController {
 
-    var jobTypes: [JobType] = []
+    var jobTypes: [JobType]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-    }
-    
-    func loadData() {
-        JobTypeCollection.load { (jobTypeCollection) in
-            if let jobTypeCollection = jobTypeCollection {
-                self.jobTypes = jobTypeCollection.data
-                self.tableView.reloadData()
-            }
-        }
     }
     
     // MARK: - Table view data source
