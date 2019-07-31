@@ -35,3 +35,38 @@ extension DailyCollection {
     }
 }
 
+extension DailyCreator {
+    func dailyCreate(callback: @escaping (DailyCollection?) -> Void) {
+        NetworkProvider.main.data(request: .dailyCreate(dailyCreator: self)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let dailyCollection = try! coder.decode(DailyCollection.self, from: data)
+                callback(dailyCollection)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+    
+    func dailyUpdate(callback: @escaping (DailyCollection?) -> Void) {
+        NetworkProvider.main.data(request: .dailyUpdate(dailyCreator: self)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let dailyCollection = try! coder.decode(DailyCollection.self, from: data)
+                callback(dailyCollection)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+    
+    func dailyDelete(callback: @escaping (Bool?) -> Void) {
+        NetworkProvider.main.data(request: .dailyDelete(dailyCreator: self)) { (data) in
+            if let data = data {
+                callback(true)
+            } else {
+                callback(false)
+            }
+        }
+    }
+}
