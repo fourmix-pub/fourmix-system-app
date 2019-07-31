@@ -44,6 +44,7 @@
 		CB4034E522F01F7D003FD4B5 /* CreateDailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */; };
 		CB4034E722F04351003FD4B5 /* JobTypeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */; };
 		CB4034E922F043CE003FD4B5 /* JobTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */; };
+		CBB4F61322F123AE001A2D76 /* EditDailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F61222F123AE001A2D76 /* EditDailyController.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDailyController.swift; sourceTree = "<group>"; };
 		CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeSearchController.swift; sourceTree = "<group>"; };
 		CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeExtensions.swift; sourceTree = "<group>"; };
+		CBB4F61222F123AE001A2D76 /* EditDailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDailyController.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */,
 				CB4034E022EFDBE5003FD4B5 /* DailyController.swift */,
 				CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */,
+				CBB4F61222F123AE001A2D76 /* EditDailyController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 				A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */,
 				A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */,
+				CBB4F61322F123AE001A2D76 /* EditDailyController.swift in Sources */,
 				A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */,
 				A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */,
 				CB4034E522F01F7D003FD4B5 /* CreateDailyController.swift in Sources */,

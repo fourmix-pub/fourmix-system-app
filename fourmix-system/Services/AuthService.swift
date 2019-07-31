@@ -13,7 +13,7 @@ let clientId = "2"
 let clientSecret = "TIyGaRpD0hK1Wjm5Em50sCOIQrUxXb8ozeCpGSG4"
 //let oauthUrl = "http://fourmix-system.test"
 //let oauthUrl = "https://e684bf35.ngrok.io"
-let oauthUrl = "https://6f0c77d3.ngrok.io"
+let oauthUrl = "https://b743acfa.ngrok.io"
 
 enum AuthService {
     case login(email: String, password: String)

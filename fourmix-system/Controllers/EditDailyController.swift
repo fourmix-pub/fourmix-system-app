@@ -1,19 +1,20 @@
 //
-//  CreateDailyController.swift
+//  EditDailyController.swift
 //  fourmix-system
 //
-//  Created by 石原比希 on 2019/07/30.
+//  Created by 石原比希 on 2019/07/31.
 //  Copyright © 2019 Fourmix. All rights reserved.
 //
 
 import UIKit
 
-class CreateDailyController: UITableViewController {
-
+class EditDailyController: UITableViewController {
+    
+    var daily: Daily!
     var project: Project?
     var workType: WorkType?
     var jobType: JobType?
-
+    
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var workTypeNameLabel: UILabel!
@@ -22,9 +23,18 @@ class CreateDailyController: UITableViewController {
     @IBOutlet weak var restTimeField: UITextField!
     @IBOutlet weak var jobTypeNameLabel: UILabel!
     @IBOutlet weak var noteView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateField.text = daily.attributes.date
+        projectNameLabel.text = daily.relationships.project.attributes.name
+        workTypeNameLabel.text = daily.relationships.workType.attributes.name
+        startField.text = daily.attributes.start
+        endField.text = daily.attributes.end
+//        restTimeField.text = daily.attributes.rest
+        jobTypeNameLabel.text = daily.relationships.jobType.attributes.name
+        noteView.text = daily.attributes.note
+        
         setup()
         setDatePicker()
         observes()
@@ -78,7 +88,7 @@ class CreateDailyController: UITableViewController {
         self.startField.addTarget(self, action: #selector(self.startTimeEditing), for: .editingDidBegin)
         self.endField.addTarget(self, action: #selector(self.endTimeEditing), for: .editingDidBegin)
     }
-    
+    //日付
     @objc func dateEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .date
@@ -89,7 +99,7 @@ class CreateDailyController: UITableViewController {
         
         datePickerView.addTarget(self, action: #selector(self.setDateFieldDate), for: .valueChanged)
     }
-    
+    //開始時刻
     @objc func startTimeEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .time
@@ -100,7 +110,7 @@ class CreateDailyController: UITableViewController {
         
         datePickerView.addTarget(self, action: #selector(self.setStartFieldDate), for: .valueChanged)
     }
-    
+    //終了時刻
     @objc func endTimeEditing(sender: UITextField) {
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = .time
@@ -124,19 +134,18 @@ class CreateDailyController: UITableViewController {
         self.endField.text = sender.date.format("HH:mm")
     }
     
-    // 完了ボタン
-    @IBAction func saveButtonHasTapped(_ sender: Any) {
+    //完了ボタン
+    @IBAction func UpdateButtonHasTapped(_ sender: Any) {
         let dailyCreator = DailyCreator(id: nil, workTypeId: workType?.id, jobTypeId: jobType?.id, projectId: project?.id, date: dateField.text, start: startField.text, end: endField.text, rest: nil, note: noteView.text)
-        print(dailyCreator)
         
-        dailyCreator.dailyCreate { (daily) in
+        dailyCreator.dailyUpdate { (daily) in
             if let daily = daily {
-                NotificationCenter.default.post(name: LocalNotificationService.dailyHasCreated, object: nil, userInfo: ["daily": daily])
+                NotificationCenter.default.post(name: LocalNotificationService.dailyHasUpdated, object: nil, userInfo: ["daily": daily])
                 self.performSegue(withIdentifier: "UnwindToDailyList", sender: self)
             }
         }
     }
-    
+
     /*
     // MARK: - Navigation
 
@@ -146,5 +155,4 @@ class CreateDailyController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
