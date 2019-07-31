@@ -61,13 +61,9 @@ extension DailyCreator {
         }
     }
     
-    func dailyDelete(callback: @escaping (Bool?) -> Void) {
-        NetworkProvider.main.data(request: .dailyDelete(dailyCreator: self)) { (data) in
-            if let data = data {
-                callback(true)
-            } else {
-                callback(false)
-            }
+    func dailyDelete(callback: @escaping (Bool) -> Void) {
+        NetworkProvider.main.noContent(request: .dailyDelete(dailyCreator: self)) { (result) in
+            callback(result)
         }
     }
 }

@@ -51,6 +51,8 @@ class DailyController: UITableViewController {
             
             self.tableView.reloadData()
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: LocalNotificationService.dailyHasDeleted, object: nil)
     }
     
     // MARK: - Table view data source
@@ -76,14 +78,33 @@ class DailyController: UITableViewController {
         }
         // 削除
         let deleteAction = UIContextualAction(style: .normal, title: "削除") { (_, _, _) in
-            let dailyCreator = DailyCreator(id: self.dailies[indexPath.row].id, workTypeId: nil, jobTypeId: nil, projectId: nil, date: nil, start: nil, end: nil, rest: nil, note: nil)
-            dailyCreator.dailyDelete(callback: { (data) in
-                if data! {
-                    self.loadData()
-                } else {
-                    print("失敗しました")
-                }
+            let alertView = UIAlertController(title: nil, message: "日報を削除します、よろしいですか？", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "キャンセル", style: .default, handler: { (_) in
+                alertView.dismiss(animated: true)
             })
+            
+            let deleteAction = UIAlertAction(title: "削除", style: .default, handler: { (_) in
+                let dailyCreator = DailyCreator(id: self.dailies[indexPath.row].id,
+                                                workTypeId: nil,
+                                                jobTypeId: nil,
+                                                projectId: nil,
+                                                date: nil,
+                                                start: nil,
+                                                end: nil,
+                                                rest: nil,
+                                                note: nil)
+                dailyCreator.dailyDelete(callback: { (result) in
+                    if result {
+                        NotificationCenter.default.post(name: LocalNotificationService.dailyHasDeleted, object: nil)
+                    }
+                })
+            })
+            
+            alertView.addAction(cancelAction)
+            alertView.addAction(deleteAction)
+            
+            self.present(alertView, animated: true)
         }
         editAction.backgroundColor = UIColor(named: "brand-blue")
         deleteAction.backgroundColor = .red

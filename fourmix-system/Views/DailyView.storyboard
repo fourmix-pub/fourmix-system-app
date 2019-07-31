@@ -268,7 +268,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="brand-blue"/>
+                                                    <color key="backgroundColor" name="brand"/>
                                                     <constraints>
                                                         <constraint firstItem="aF3-sz-Myd" firstAttribute="centerY" secondItem="llH-c0-BFn" secondAttribute="centerY" id="74q-nJ-vi3"/>
                                                         <constraint firstAttribute="trailing" secondItem="aF3-sz-Myd" secondAttribute="trailing" constant="4" id="EBC-4I-pHZ"/>
@@ -601,9 +601,6 @@
         </namedColor>
         <namedColor name="brand-black">
             <color red="0.125" green="0.090000003576278687" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="brand-blue">
-            <color red="0.0" green="0.43900001049041748" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -228,7 +228,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="日報" id="Fe5-Ar-sNx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fh3-iB-yHq">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="add-30" id="Fh3-iB-yHq">
+                            <color key="tintColor" name="brand"/>
                             <connections>
                                 <segue destination="6zg-cC-DPb" kind="presentation" id="Ylq-Bm-n5j"/>
                             </connections>
@@ -1112,6 +1113,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add-30" width="30" height="30"/>
         <image name="daily-25" width="25" height="25"/>
         <namedColor name="brand">
             <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
