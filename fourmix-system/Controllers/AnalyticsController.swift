@@ -20,7 +20,8 @@ class AnalyticsController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "UserPreProjectAnalysisSegue", "WorkTypePreProjectAnalysisSegue":
-            break
+            let destination = segue.destination as! PreProjectAnalyticsController
+            destination.segueIdentifier = segue.identifier
         case "ProjectPreUserAnalysisSegue", "WorkTypePreUserAnalysisSegue":
             let destination = segue.destination as! PreUserAnalyticsController
             destination.segueIdentifier = segue.identifier

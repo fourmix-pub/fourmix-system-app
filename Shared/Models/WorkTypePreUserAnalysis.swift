@@ -31,3 +31,7 @@ struct WorkTypePreUserAnalysis: Codable {
         var `self`: String?
     }
 }
+
+struct WorkTypePreUserAnalysisCollection: Codable {
+    var data: [WorkTypePreUserAnalysis]
+}

@@ -31,3 +31,7 @@ struct UserPreProjectAnalysis: Codable {
         var `self`: String?
     }
 }
+
+struct UserPreProjectAnalysisCollection: Codable {
+    var data: [UserPreProjectAnalysis]
+}
