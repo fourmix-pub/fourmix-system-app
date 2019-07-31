@@ -36,7 +36,7 @@ class PreUserAnalyticsController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserSearchCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PreUserAnalysisCell", for: indexPath)
         
         cell.textLabel?.text = users[indexPath.row].attributes.name
         
