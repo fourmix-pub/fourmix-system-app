@@ -23,10 +23,10 @@ enum NetworkService {
     case jobTypeCollection
     case customerCollection
     case departmentCollection
-    case workTypePreProjectAnalysis(query: [String: Any])
-    case userPreProjectAnalysis(query: [String: Any])
-    case workTypePreUserAnalysis(query: [String: Any])
-    case projectPreUserAnalysis(query: [String: Any])
+    case workTypePreProjectAnalysisCollection(query: [String: Any])
+    case userPreProjectAnalysisCollection(query: [String: Any])
+    case workTypePreUserAnalysisCollection(query: [String: Any])
+    case projectPreUserAnalysisCollection(query: [String: Any])
 }
 
 extension NetworkService: TargetType {
@@ -55,20 +55,20 @@ extension NetworkService: TargetType {
             return "/customers"
         case .departmentCollection:
             return "/departments"
-        case .workTypePreProjectAnalysis:
+        case .workTypePreProjectAnalysisCollection:
             return "/analytics/workTypePreProject"
-        case .userPreProjectAnalysis:
+        case .userPreProjectAnalysisCollection:
             return "/analytics/userPreProject"
-        case .workTypePreUserAnalysis:
+        case .workTypePreUserAnalysisCollection:
             return "/analytics/workTypePreUser"
-        case .projectPreUserAnalysis:
+        case .projectPreUserAnalysisCollection:
             return "/analytics/projectPreUser"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .profile, .userCollection, .userDailies, .dailyCollection, .projectCollection, .workTypeCollection, .jobTypeCollection, .customerCollection, .departmentCollection, .workTypePreProjectAnalysis, .userPreProjectAnalysis, .workTypePreUserAnalysis, .projectPreUserAnalysis:
+        case .profile, .userCollection, .userDailies, .dailyCollection, .projectCollection, .workTypeCollection, .jobTypeCollection, .customerCollection, .departmentCollection, .workTypePreProjectAnalysisCollection, .userPreProjectAnalysisCollection, .workTypePreUserAnalysisCollection, .projectPreUserAnalysisCollection:
             return .get
         case .dailyCreate:
             return .post
@@ -114,13 +114,13 @@ extension NetworkService: TargetType {
                 "rest": dailyCreator.rest as Any,
                 "note": dailyCreator.note as Any
                 ], encoding: JSONEncoding.default)
-        case let .workTypePreProjectAnalysis(query):
+        case let .workTypePreProjectAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .userPreProjectAnalysis(query):
+        case let .userPreProjectAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .workTypePreUserAnalysis(query):
+        case let .workTypePreUserAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .projectPreUserAnalysis(query):
+        case let .projectPreUserAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
         }
     }

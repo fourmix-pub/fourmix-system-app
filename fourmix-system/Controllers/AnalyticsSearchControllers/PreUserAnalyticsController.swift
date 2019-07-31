@@ -45,7 +45,19 @@ class PreUserAnalyticsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-        self.performSegue(withIdentifier: identifier(from: segueIdentifier), sender: user)
+        
+        let query:[String: Any] = [
+            "user_id": user.id
+        ]
+        
+        WorkTypePreUserAnalysisCollection.load(query: query) { (workTypePreUserAnalysisCollection) in
+            if let workTypePreUserAnalysisCollection = workTypePreUserAnalysisCollection {
+                self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
+                    "user": user,
+                    "data": workTypePreUserAnalysisCollection
+                    ])
+            }
+        }
     }
     
     func identifier(from segueIdentifier: String) -> String {
@@ -64,7 +76,12 @@ class PreUserAnalyticsController: UITableViewController {
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WorkTypePreUserAnalysisDetailSegue" {
-            
+            let destination = segue.destination as! WorkTypePreUserAnalysisDetailController
+            let sender = sender as! [String: Any?]
+            let workTypePreUserAnalysisCollection = sender["data"] as? WorkTypePreUserAnalysisCollection
+            let user = sender["user"] as? User
+            destination.workTypePreUserAnalysisDetails = workTypePreUserAnalysisCollection?.data
+            destination.user = user
         }
         
         if segue.identifier == "ProjectPreUserAnalysisDetailSegue" {

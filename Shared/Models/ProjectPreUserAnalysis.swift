@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProjectPreUserAnalysis: Codable {
-    var id: Int
+    var id: Int?
     var attributes: Attributes
     var links: Links
     
