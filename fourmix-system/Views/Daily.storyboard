@@ -262,7 +262,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLR-jT-C3x">
-                                                    <rect key="frame" x="20" y="19" width="35" height="21"/>
+                                                    <rect key="frame" x="60" y="19" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -275,11 +275,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date-30" translatesAutoresizingMaskIntoConstraints="NO" id="J5I-Yc-hWY">
+                                                    <rect key="frame" x="20" y="14.5" width="30" height="30"/>
+                                                    <color key="tintColor" name="brand"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" id="NEl-cq-V9D"/>
+                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" multiplier="3" id="NEl-cq-V9D"/>
                                                 <constraint firstItem="mGi-er-SmR" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="VG9-1k-GIK"/>
+                                                <constraint firstItem="J5I-Yc-hWY" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" id="YMa-ld-63V"/>
                                                 <constraint firstItem="pLR-jT-C3x" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="cxo-AI-4dE"/>
+                                                <constraint firstItem="J5I-Yc-hWY" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="jgw-ST-2yB"/>
                                                 <constraint firstAttribute="trailing" secondItem="mGi-er-SmR" secondAttribute="trailing" constant="24" id="z6D-FU-lN5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1115,6 +1121,7 @@
     <resources>
         <image name="add-30" width="30" height="30"/>
         <image name="daily-25" width="25" height="25"/>
+        <image name="date-30" width="30" height="30"/>
         <namedColor name="brand">
             <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
