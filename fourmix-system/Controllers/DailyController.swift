@@ -14,27 +14,19 @@ class DailyController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshControl = UIRefreshControl()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadData()
     }
 
-    @objc func loadDate() {
-        
+    func loadData() {
+        DailyCollection.load { (dailyCollection) in
+            if let dailyCollection = dailyCollection {
+                self.dailies = dailyCollection.data
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - Table view data source
-    
-    // セクションの数
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
     // セクションの行の数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
