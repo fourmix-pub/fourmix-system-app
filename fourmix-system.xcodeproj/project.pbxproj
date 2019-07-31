@@ -32,6 +32,10 @@
 		A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AC22E99FB000D892AE /* AuthService.swift */; };
 		A9B5A9B022E9A34000D892AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AF22E9A34000D892AE /* Token.swift */; };
 		A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9B122E9A57200D892AE /* NotificationService.swift */; };
+		A9FBC50422F138EE00ED7F06 /* PreProjectAnalysis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FBC50322F138EE00ED7F06 /* PreProjectAnalysis.storyboard */; };
+		A9FBC50622F138FF00ED7F06 /* PreUserAnalysis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FBC50522F138FF00ED7F06 /* PreUserAnalysis.storyboard */; };
+		A9FBC50822F139EF00ED7F06 /* PreUserAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */; };
+		A9FBC50A22F13A9400ED7F06 /* AnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */; };
 		A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */; };
 		A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1B22EEAF49009F86B3 /* Daily.swift */; };
 		A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */; };
@@ -86,6 +90,10 @@
 		A9B5A9AC22E99FB000D892AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A9B5A9AF22E9A34000D892AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		A9B5A9B122E9A57200D892AE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A9FBC50322F138EE00ED7F06 /* PreProjectAnalysis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreProjectAnalysis.storyboard; sourceTree = "<group>"; };
+		A9FBC50522F138FF00ED7F06 /* PreUserAnalysis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreUserAnalysis.storyboard; sourceTree = "<group>"; };
+		A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreUserAnalyticsController.swift; sourceTree = "<group>"; };
+		A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsController.swift; sourceTree = "<group>"; };
 		A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPreUserAnalysis.swift; sourceTree = "<group>"; };
 		A9FF3E1B22EEAF49009F86B3 /* Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 		A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysis.swift; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 		A93F97D722E97810007D7004 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9FBC4F222F11CEE00ED7F06 /* AnalyticsViews */,
 				F2E09A4D22E94AF3003808A4 /* Main.storyboard */,
 				A93F97D922E97868007D7004 /* Login.storyboard */,
 				A931997722EA8BE9003C1F30 /* Daily.storyboard */,
@@ -162,6 +171,7 @@
 		A93F97D822E97823007D7004 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9FBC4FE22F12F7A00ED7F06 /* AnalyticsSearchControllers */,
 				A90A9C1C22EFD37B0074B2A8 /* DailySearchControllers */,
 				A94B6D3622E985C300E1C384 /* LoginController.swift */,
 				A931997F22EA9690003C1F30 /* SettingsController.swift */,
@@ -171,6 +181,7 @@
 				7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */,
 				CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */,
 				CBB4F61222F123AE001A2D76 /* EditDailyController.swift */,
+				A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +207,23 @@
 				CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A9FBC4F222F11CEE00ED7F06 /* AnalyticsViews */ = {
+			isa = PBXGroup;
+			children = (
+				A9FBC50322F138EE00ED7F06 /* PreProjectAnalysis.storyboard */,
+				A9FBC50522F138FF00ED7F06 /* PreUserAnalysis.storyboard */,
+			);
+			path = AnalyticsViews;
+			sourceTree = "<group>";
+		};
+		A9FBC4FE22F12F7A00ED7F06 /* AnalyticsSearchControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */,
+			);
+			path = AnalyticsSearchControllers;
 			sourceTree = "<group>";
 		};
 		A9FF3E1822EEAF11009F86B3 /* Shared */ = {
@@ -350,7 +378,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93F97DA22E97868007D7004 /* Login.storyboard in Resources */,
+				A9FBC50422F138EE00ED7F06 /* PreProjectAnalysis.storyboard in Resources */,
 				F2E09A5422E94AF5003808A4 /* LaunchScreen.storyboard in Resources */,
+				A9FBC50622F138FF00ED7F06 /* PreUserAnalysis.storyboard in Resources */,
 				F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */,
 				A931997E22EA8C2B003C1F30 /* Settings.storyboard in Resources */,
 				F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */,
@@ -429,10 +459,12 @@
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
 				A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */,
 				A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */,
+				A9FBC50A22F13A9400ED7F06 /* AnalyticsController.swift in Sources */,
 				A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */,
 				A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */,
 				CB4034DF22EFCE62003FD4B5 /* DailyCell.swift in Sources */,
 				A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */,
+				A9FBC50822F139EF00ED7F06 /* PreUserAnalyticsController.swift in Sources */,
 				A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */,
 				A90A9C3322F028CD0074B2A8 /* DailyViewDetailController.swift in Sources */,
 				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
