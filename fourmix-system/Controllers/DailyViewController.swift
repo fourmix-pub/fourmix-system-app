@@ -24,7 +24,6 @@ class DailyViewController: UITableViewController {
         super.viewDidLoad()
         setDatePicker()
         observes()
-        
         self.tableView.keyboardDismissMode = .onDrag
     }
     
@@ -95,14 +94,45 @@ class DailyViewController: UITableViewController {
         self.endField.text = sender.date.format()
     }
     
-    /*
+    
+    @IBAction func searchDailies(_ sender: Any) {
+        
+        let query:[String: Any] = [
+            "filter[user_id]": user?.id ?? "",
+            "filter[project_id]": project?.id ?? "",
+            "filter[work_type_id]": workType?.id ?? "",
+            "filter[started_time]": startField.text ?? "",
+            "filter[ended_time]": endField.text ?? ""
+        ]
+        
+        DailyCollection.load(query: query) { (dailyCollection) in
+            if let dailyCollection = dailyCollection {
+                self.performSegue(withIdentifier: "DailySearchResultsSegue", sender: dailyCollection)
+            }
+        }
+    }
+    
+    @IBAction func clearButtonHasTapped(_ sender: Any) {
+        self.user = nil
+        self.project = nil
+        self.workType = nil
+        self.startField.text = nil
+        self.endField.text = nil
+        self.userNameLabel.text = "選択してください"
+        self.projectNameLabel.text = "選択してください"
+        self.workTypeNameLabel.text = "選択してください"
+    }
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "DailySearchResultsSegue" {
+            let destination = segue.destination as! DailyViewDetailController
+            let dailyCollection = sender as? DailyCollection
+            destination.dailies = dailyCollection?.data
+        }
     }
-    */
-
 }

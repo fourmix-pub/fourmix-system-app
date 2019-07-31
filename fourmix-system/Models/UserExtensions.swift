@@ -22,3 +22,31 @@ extension UserCollection {
         }
     }
 }
+
+extension UserData {
+    static func getProfile(callback: @escaping (UserData?) -> Void) {
+        NetworkProvider.main.data(request: .profile) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let userData = try! coder.decode(UserData.self, from: data)
+                callback(userData)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+}
+
+extension UserCreator {
+    func updateProfile(callback: @escaping (UserData?) -> Void) {
+        NetworkProvider.main.data(request: .userUpdate(userCreator: self)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let userData = try! coder.decode(UserData.self, from: data)
+                callback(userData)
+            } else {
+                callback(nil)
+            }
+        }
+    }
+}

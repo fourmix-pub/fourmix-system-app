@@ -21,6 +21,18 @@ extension DailyCollection {
             }
         }
     }
+    
+    static func load(query: [String: Any], callback: @escaping (DailyCollection?) -> Void) {
+        NetworkProvider.main.data(request: .dailyCollection(query: query)) { (data) in
+            if let data = data {
+                let coder = JSONDecoder()
+                let dailyCollection = try! coder.decode(DailyCollection.self, from: data)
+                callback(dailyCollection)
+            } else {
+                callback(nil)
+            }
+        }
+    }
 }
 
 extension DailyCreator {

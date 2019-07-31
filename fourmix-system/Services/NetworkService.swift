@@ -88,9 +88,9 @@ extension NetworkService: TargetType {
         case let .userUpdate(userCreator):
             return .requestParameters(parameters: [
                 "name": userCreator.name as Any,
-                "email": userCreator.email as Any,
+                "old_password" : userCreator.oldPassword as Any,
                 "password": userCreator.password as Any,
-                "password_conform": userCreator.passwordConform as Any
+                "password_confirmation": userCreator.passwordConform as Any
                 ], encoding: JSONEncoding.default)
         case let .dailyCreate(dailyCreator):
             return .requestParameters(parameters: [
@@ -168,6 +168,21 @@ class NetworkProvider {
                         NotificationCenter.default.post(name: LocalNotificationService.unauthorized, object: nil, userInfo: [
                             "code": 401,
                             "message": "メールアドレスまたはパスワードが間違っています。"
+                            ])
+                        callback(nil)
+                    case 422:
+                        let data = response.data
+                        let coder = JSONDecoder()
+                        let errors = try! coder.decode(Errors.self, from: data)
+                        var message: String = ""
+                        for errorsObj in errors.errors {
+                            for error in errorsObj.value {
+                                message += error
+                            }
+                        }
+                        NotificationCenter.default.post(name: LocalNotificationService.inputError, object: nil, userInfo: [
+                            "code": 422,
+                            "message": message
                             ])
                         callback(nil)
                     default:
