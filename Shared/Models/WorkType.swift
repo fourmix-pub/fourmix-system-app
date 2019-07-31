@@ -30,6 +30,6 @@ struct WorkType: Codable {
     }
 }
 
-struct WorkTypeCollection {
+struct WorkTypeCollection: Codable {
     var data: [WorkType]
 }

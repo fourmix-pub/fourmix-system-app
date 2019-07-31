@@ -32,6 +32,6 @@ struct JobType: Codable {
     }
 }
 
-struct JobTypeCollection {
+struct JobTypeCollection: Codable {
     var data: [JobType]
 }

@@ -8,9 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */; };
+		7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */; };
+		7B166D9F22F011DA002FEF1A /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */; };
+		7B166DA122F0429B002FEF1A /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166DA022F0429B002FEF1A /* Systems.swift */; };
 		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
 		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
 		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
+		A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */; };
+		A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */; };
+		A90A9C2822EFEA4B0074B2A8 /* WorkTypeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */; };
+		A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */; };
+		A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2C22F0130D0074B2A8 /* Helpers.swift */; };
+		A90A9C3122F0241D0074B2A8 /* DailyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C3022F0241D0074B2A8 /* DailyViewCell.swift */; };
+		A90A9C3322F028CD0074B2A8 /* DailyViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C3222F028CD0074B2A8 /* DailyViewDetailController.swift */; };
+		7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */; };
 		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
 		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
 		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
@@ -37,6 +48,13 @@
 		A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2322EEAF49009F86B3 /* JobType.swift */; };
 		A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E2422EEAF49009F86B3 /* WorkType.swift */; };
 		A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */; };
+		CB4034DF22EFCE62003FD4B5 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */; };
+		CB4034E122EFDBE5003FD4B5 /* DailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E022EFDBE5003FD4B5 /* DailyController.swift */; };
+		CB4034E322EFE4B0003FD4B5 /* DailyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */; };
+		CB4034E522F01F7D003FD4B5 /* CreateDailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */; };
+		CB4034E722F04351003FD4B5 /* JobTypeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */; };
+		CB4034E922F043CE003FD4B5 /* JobTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */; };
+		CBB4F61322F123AE001A2D76 /* EditDailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F61222F123AE001A2D76 /* EditDailyController.swift */; };
 		F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E09A4922E94AF3003808A4 /* AppDelegate.swift */; };
 		F2E09A4F22E94AF3003808A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A4D22E94AF3003808A4 /* Main.storyboard */; };
 		F2E09A5122E94AF5003808A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E09A5022E94AF5003808A4 /* Assets.xcassets */; };
@@ -45,10 +63,22 @@
 
 /* Begin PBXFileReference section */
 		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
+		7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
+		7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
+		7B166DA022F0429B002FEF1A /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
 		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
 		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
 		A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSearchController.swift; sourceTree = "<group>"; };
+		A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExtensions.swift; sourceTree = "<group>"; };
+		A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypeSearchController.swift; sourceTree = "<group>"; };
+		A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypeExtensions.swift; sourceTree = "<group>"; };
+		A90A9C2C22F0130D0074B2A8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		A90A9C2E22F015F40074B2A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		A90A9C2F22F015F40074B2A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A90A9C3022F0241D0074B2A8 /* DailyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewCell.swift; sourceTree = "<group>"; };
+		A90A9C3222F028CD0074B2A8 /* DailyViewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewDetailController.swift; sourceTree = "<group>"; };
 		A90E6A9522EAD08900FC6443 /* fourmix-system.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fourmix-system.xcodeproj"; path = "../../../Desktop/fourmix-system.xcodeproj"; sourceTree = "<group>"; };
 		A931997722EA8BE9003C1F30 /* Daily.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
 		A931997922EA8C02003C1F30 /* DailyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyView.storyboard; sourceTree = "<group>"; };
@@ -76,6 +106,13 @@
 		A9FF3E2322EEAF49009F86B3 /* JobType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
 		A9FF3E2422EEAF49009F86B3 /* WorkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkType.swift; sourceTree = "<group>"; };
 		A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
+		CB4034E022EFDBE5003FD4B5 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
+		CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExtensions.swift; sourceTree = "<group>"; };
+		CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDailyController.swift; sourceTree = "<group>"; };
+		CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeSearchController.swift; sourceTree = "<group>"; };
+		CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeExtensions.swift; sourceTree = "<group>"; };
+		CBB4F61222F123AE001A2D76 /* EditDailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDailyController.swift; sourceTree = "<group>"; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,8 +138,20 @@
 			isa = PBXGroup;
 			children = (
 				A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */,
+				A90A9C2322EFE40A0074B2A8 /* ProjectSearchController.swift */,
+				A90A9C2722EFEA4B0074B2A8 /* WorkTypeSearchController.swift */,
+				A90A9C3222F028CD0074B2A8 /* DailyViewDetailController.swift */,
+				CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */,
 			);
 			path = DailySearchControllers;
+			sourceTree = "<group>";
+		};
+		A90A9C2B22F012EB0074B2A8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A90A9C2C22F0130D0074B2A8 /* Helpers.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 		A93F97D722E97810007D7004 /* Views */ = {
@@ -127,6 +176,11 @@
 				A94B6D3622E985C300E1C384 /* LoginController.swift */,
 				A931997F22EA9690003C1F30 /* SettingsController.swift */,
 				A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */,
+				CB4034E022EFDBE5003FD4B5 /* DailyController.swift */,
+				7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */,
+				7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */,
+				CB4034E422F01F7D003FD4B5 /* CreateDailyController.swift */,
+				CBB4F61222F123AE001A2D76 /* EditDailyController.swift */,
 				A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */,
 			);
 			path = Controllers;
@@ -147,6 +201,10 @@
 			children = (
 				A9B5A9AF22E9A34000D892AE /* Token.swift */,
 				A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */,
+				A90A9C2522EFE5470074B2A8 /* ProjectExtensions.swift */,
+				A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */,
+				CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */,
+				CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +248,7 @@
 				A9FF3E2422EEAF49009F86B3 /* WorkType.swift */,
 				A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */,
 				A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */,
+				7B166DA022F0429B002FEF1A /* Systems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +268,15 @@
 				F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB4034D922EFCCDF003FD4B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */,
+				A90A9C3022F0241D0074B2A8 /* DailyViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F2E09A3D22E94AF3003808A4 = {
@@ -234,6 +302,8 @@
 		F2E09A4822E94AF3003808A4 /* fourmix-system */ = {
 			isa = PBXGroup;
 			children = (
+				A90A9C2B22F012EB0074B2A8 /* Supports */,
+				CB4034D922EFCCDF003FD4B5 /* Cells */,
 				A9B5A9AE22E9A30E00D892AE /* Models */,
 				A9B5A9AB22E99F7F00D892AE /* Services */,
 				A93F97D822E97823007D7004 /* Controllers */,
@@ -290,6 +360,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F2E09A3D22E94AF3003808A4;
 			productRefGroup = F2E09A4722E94AF3003808A4 /* Products */;
@@ -368,29 +439,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B166DA122F0429B002FEF1A /* Systems.swift in Sources */,
+				A90A9C2822EFEA4B0074B2A8 /* WorkTypeSearchController.swift in Sources */,
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
+				A90A9C3122F0241D0074B2A8 /* DailyViewCell.swift in Sources */,
+				A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */,
+				CB4034E322EFE4B0003FD4B5 /* DailyExtensions.swift in Sources */,
+				CB4034E122EFDBE5003FD4B5 /* DailyController.swift in Sources */,
 				A9FF3E2A22EEAF49009F86B3 /* Customer.swift in Sources */,
+				CB4034E722F04351003FD4B5 /* JobTypeSearchController.swift in Sources */,
 				A9FF3E3122EEAF67009F86B3 /* NetworkService.swift in Sources */,
+				A90A9C2622EFE5470074B2A8 /* ProjectExtensions.swift in Sources */,
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */,
 				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,
+				7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
 				A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */,
 				A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */,
 				A9FBC50A22F13A9400ED7F06 /* AnalyticsController.swift in Sources */,
 				A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */,
 				A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */,
+				CB4034DF22EFCE62003FD4B5 /* DailyCell.swift in Sources */,
 				A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */,
 				A9FBC50822F139EF00ED7F06 /* PreUserAnalyticsController.swift in Sources */,
 				A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */,
+				A90A9C3322F028CD0074B2A8 /* DailyViewDetailController.swift in Sources */,
 				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
 				A9FF3E2822EEAF49009F86B3 /* Department.swift in Sources */,
 				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 				A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */,
+				7B166D9F22F011DA002FEF1A /* ResetPasswordController.swift in Sources */,
+				A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */,
+				CBB4F61322F123AE001A2D76 /* EditDailyController.swift in Sources */,
 				A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */,
+				A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */,
+				CB4034E522F01F7D003FD4B5 /* CreateDailyController.swift in Sources */,
+				CB4034E922F043CE003FD4B5 /* JobTypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +489,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2E09A4E22E94AF3003808A4 /* Base */,
+				A90A9C2E22F015F40074B2A8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -409,6 +498,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2E09A5322E94AF5003808A4 /* Base */,
+				A90A9C2F22F015F40074B2A8 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -420,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -481,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
