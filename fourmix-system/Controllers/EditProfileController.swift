@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class EditProfileController: UITableViewController {
     
@@ -23,9 +24,11 @@ class EditProfileController: UITableViewController {
     }
        
     @IBAction func updateButtonHasTapped(_ sender: Any) {
+        KRProgressHUD.show()
         let userCreator  = UserCreator(name: nameField.text, oldPassword: nil, password: nil, passwordConform: nil)
         
         userCreator.updateProfile { (userData) in
+            KRProgressHUD.dismiss()
             if let userData = userData {
                 NotificationCenter.default.post(name: LocalNotificationService.profileHasUpdated, object: nil, userInfo: ["user": userData.data])
                 self.navigationController?.popViewController(animated: true)

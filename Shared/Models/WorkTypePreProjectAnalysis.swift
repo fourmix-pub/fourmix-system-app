@@ -9,7 +9,7 @@
 import Foundation
 
 struct WorkTypePreProjectAnalysis: Codable {
-    var id: Int
+    var id: Int?
     var attributes: Attributes
     var links: Links
     
@@ -30,4 +30,8 @@ struct WorkTypePreProjectAnalysis: Codable {
     struct Links: Codable {
         var `self`: String?
     }
+}
+
+struct WorkTypePreProjectAnalysisCollection: Codable {
+    var data: [WorkTypePreProjectAnalysis]
 }

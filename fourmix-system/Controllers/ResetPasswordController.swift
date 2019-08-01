@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class ResetPasswordController: UITableViewController {
 
@@ -25,9 +26,11 @@ class ResetPasswordController: UITableViewController {
 
     
     @IBAction func resetButtonHasTapped(_ sender: Any) {
+        KRProgressHUD.show()
         let userCreator = UserCreator(name: nil, oldPassword: oldPassword.text, password: newPassword.text, passwordConform: confirmPassword.text)
         
             userCreator.updateProfile { (userData) in
+                KRProgressHUD.dismiss()
                 if let userData = userData {
                 NotificationCenter.default.post(name: LocalNotificationService.passwordHasReset, object: nil, userInfo: ["user": userData.data])
                 self.navigationController?.popViewController(animated: true)

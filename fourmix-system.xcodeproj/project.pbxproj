@@ -21,7 +21,6 @@
 		A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2C22F0130D0074B2A8 /* Helpers.swift */; };
 		A90A9C3122F0241D0074B2A8 /* DailyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C3022F0241D0074B2A8 /* DailyViewCell.swift */; };
 		A90A9C3322F028CD0074B2A8 /* DailyViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C3222F028CD0074B2A8 /* DailyViewDetailController.swift */; };
-		7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */; };
 		A931997822EA8BE9003C1F30 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997722EA8BE9003C1F30 /* Daily.storyboard */; };
 		A931997A22EA8C02003C1F30 /* DailyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997922EA8C02003C1F30 /* DailyView.storyboard */; };
 		A931997C22EA8C1B003C1F30 /* Analytics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A931997B22EA8C1B003C1F30 /* Analytics.storyboard */; };
@@ -29,6 +28,10 @@
 		A931998022EA9690003C1F30 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A931997F22EA9690003C1F30 /* SettingsController.swift */; };
 		A93F97DA22E97868007D7004 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F97D922E97868007D7004 /* Login.storyboard */; };
 		A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B6D3622E985C300E1C384 /* LoginController.swift */; };
+		A96E86CE22F2681A0054999B /* ProjectPreUserAnalysisDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E86CD22F2681A0054999B /* ProjectPreUserAnalysisDetailController.swift */; };
+		A96E86D022F270D30054999B /* WorkTypePreProjectAnalysisDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E86CF22F270D30054999B /* WorkTypePreProjectAnalysisDetailController.swift */; };
+		A96E86D222F274FF0054999B /* UserPreProjectAnalysisDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E86D122F274FF0054999B /* UserPreProjectAnalysisDetailController.swift */; };
+		A96E86D422F2B48C0054999B /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E86D322F2B48C0054999B /* Others.swift */; };
 		A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AC22E99FB000D892AE /* AuthService.swift */; };
 		A9B5A9B022E9A34000D892AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9AF22E9A34000D892AE /* Token.swift */; };
 		A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5A9B122E9A57200D892AE /* NotificationService.swift */; };
@@ -36,6 +39,12 @@
 		A9FBC50622F138FF00ED7F06 /* PreUserAnalysis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FBC50522F138FF00ED7F06 /* PreUserAnalysis.storyboard */; };
 		A9FBC50822F139EF00ED7F06 /* PreUserAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */; };
 		A9FBC50A22F13A9400ED7F06 /* AnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */; };
+		A9FBC51122F1673300ED7F06 /* PreProjectAnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51022F1673300ED7F06 /* PreProjectAnalyticsController.swift */; };
+		A9FBC51322F16AAF00ED7F06 /* WorkTypePreProjectAnalysisExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51222F16AAF00ED7F06 /* WorkTypePreProjectAnalysisExtensions.swift */; };
+		A9FBC51522F16AD500ED7F06 /* UserPreProjectAnalysisExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51422F16AD500ED7F06 /* UserPreProjectAnalysisExtensions.swift */; };
+		A9FBC51722F16AF700ED7F06 /* WorkTypePreUserAnalysisExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51622F16AF700ED7F06 /* WorkTypePreUserAnalysisExtensions.swift */; };
+		A9FBC51922F16B1100ED7F06 /* ProjectPreUserAnalysisExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51822F16B1100ED7F06 /* ProjectPreUserAnalysisExtensions.swift */; };
+		A9FBC51B22F1703300ED7F06 /* WorkTypePreUserAnalysisDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FBC51A22F1703300ED7F06 /* WorkTypePreUserAnalysisDetailController.swift */; };
 		A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */; };
 		A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1B22EEAF49009F86B3 /* Daily.swift */; };
 		A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */; };
@@ -87,6 +96,10 @@
 		A931997F22EA9690003C1F30 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		A93F97D922E97868007D7004 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A94B6D3622E985C300E1C384 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A96E86CD22F2681A0054999B /* ProjectPreUserAnalysisDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPreUserAnalysisDetailController.swift; sourceTree = "<group>"; };
+		A96E86CF22F270D30054999B /* WorkTypePreProjectAnalysisDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypePreProjectAnalysisDetailController.swift; sourceTree = "<group>"; };
+		A96E86D122F274FF0054999B /* UserPreProjectAnalysisDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysisDetailController.swift; sourceTree = "<group>"; };
+		A96E86D322F2B48C0054999B /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 		A9B5A9AC22E99FB000D892AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A9B5A9AF22E9A34000D892AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		A9B5A9B122E9A57200D892AE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -94,6 +107,12 @@
 		A9FBC50522F138FF00ED7F06 /* PreUserAnalysis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreUserAnalysis.storyboard; sourceTree = "<group>"; };
 		A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreUserAnalyticsController.swift; sourceTree = "<group>"; };
 		A9FBC50922F13A9400ED7F06 /* AnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsController.swift; sourceTree = "<group>"; };
+		A9FBC51022F1673300ED7F06 /* PreProjectAnalyticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreProjectAnalyticsController.swift; sourceTree = "<group>"; };
+		A9FBC51222F16AAF00ED7F06 /* WorkTypePreProjectAnalysisExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypePreProjectAnalysisExtensions.swift; sourceTree = "<group>"; };
+		A9FBC51422F16AD500ED7F06 /* UserPreProjectAnalysisExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysisExtensions.swift; sourceTree = "<group>"; };
+		A9FBC51622F16AF700ED7F06 /* WorkTypePreUserAnalysisExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypePreUserAnalysisExtensions.swift; sourceTree = "<group>"; };
+		A9FBC51822F16B1100ED7F06 /* ProjectPreUserAnalysisExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPreUserAnalysisExtensions.swift; sourceTree = "<group>"; };
+		A9FBC51A22F1703300ED7F06 /* WorkTypePreUserAnalysisDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTypePreUserAnalysisDetailController.swift; sourceTree = "<group>"; };
 		A9FF3E1A22EEAF49009F86B3 /* ProjectPreUserAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectPreUserAnalysis.swift; sourceTree = "<group>"; };
 		A9FF3E1B22EEAF49009F86B3 /* Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 		A9FF3E1C22EEAF49009F86B3 /* UserPreProjectAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreProjectAnalysis.swift; sourceTree = "<group>"; };
@@ -205,6 +224,10 @@
 				A90A9C2922EFECE30074B2A8 /* WorkTypeExtensions.swift */,
 				CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */,
 				CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */,
+				A9FBC51222F16AAF00ED7F06 /* WorkTypePreProjectAnalysisExtensions.swift */,
+				A9FBC51422F16AD500ED7F06 /* UserPreProjectAnalysisExtensions.swift */,
+				A9FBC51622F16AF700ED7F06 /* WorkTypePreUserAnalysisExtensions.swift */,
+				A9FBC51822F16B1100ED7F06 /* ProjectPreUserAnalysisExtensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +245,11 @@
 			isa = PBXGroup;
 			children = (
 				A9FBC50722F139EF00ED7F06 /* PreUserAnalyticsController.swift */,
+				A9FBC51022F1673300ED7F06 /* PreProjectAnalyticsController.swift */,
+				A9FBC51A22F1703300ED7F06 /* WorkTypePreUserAnalysisDetailController.swift */,
+				A96E86CD22F2681A0054999B /* ProjectPreUserAnalysisDetailController.swift */,
+				A96E86CF22F270D30054999B /* WorkTypePreProjectAnalysisDetailController.swift */,
+				A96E86D122F274FF0054999B /* UserPreProjectAnalysisDetailController.swift */,
 			);
 			path = AnalyticsSearchControllers;
 			sourceTree = "<group>";
@@ -249,6 +277,7 @@
 				A9FF3E2022EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift */,
 				A9FF3E2122EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift */,
 				7B166DA022F0429B002FEF1A /* Systems.swift */,
+				A96E86D322F2B48C0054999B /* Others.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +472,7 @@
 				A90A9C2822EFEA4B0074B2A8 /* WorkTypeSearchController.swift in Sources */,
 				A931998022EA9690003C1F30 /* SettingsController.swift in Sources */,
 				A9FF3E2622EEAF49009F86B3 /* Daily.swift in Sources */,
+				A9FBC51122F1673300ED7F06 /* PreProjectAnalyticsController.swift in Sources */,
 				A9FF3E2722EEAF49009F86B3 /* UserPreProjectAnalysis.swift in Sources */,
 				A90A9C3122F0241D0074B2A8 /* DailyViewCell.swift in Sources */,
 				A90A9C2422EFE40A0074B2A8 /* ProjectSearchController.swift in Sources */,
@@ -455,6 +485,7 @@
 				A9B5A9AD22E99FB000D892AE /* AuthService.swift in Sources */,
 				A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */,
 				A9FF3E2E22EEAF49009F86B3 /* JobType.swift in Sources */,
+				A9FBC51722F16AF700ED7F06 /* WorkTypePreUserAnalysisExtensions.swift in Sources */,
 				7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */,
 				F2E09A4A22E94AF3003808A4 /* AppDelegate.swift in Sources */,
 				A9FF3E2F22EEAF49009F86B3 /* WorkType.swift in Sources */,
@@ -462,20 +493,28 @@
 				A9FBC50A22F13A9400ED7F06 /* AnalyticsController.swift in Sources */,
 				A9FF3E2522EEAF49009F86B3 /* ProjectPreUserAnalysis.swift in Sources */,
 				A9FF3E2C22EEAF49009F86B3 /* WorkTypePreUserAnalysis.swift in Sources */,
+				A96E86D022F270D30054999B /* WorkTypePreProjectAnalysisDetailController.swift in Sources */,
+				A96E86D422F2B48C0054999B /* Others.swift in Sources */,
 				CB4034DF22EFCE62003FD4B5 /* DailyCell.swift in Sources */,
+				A9FBC51522F16AD500ED7F06 /* UserPreProjectAnalysisExtensions.swift in Sources */,
 				A9FF3E2D22EEAF49009F86B3 /* Project.swift in Sources */,
 				A9FBC50822F139EF00ED7F06 /* PreUserAnalyticsController.swift in Sources */,
 				A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */,
 				A90A9C3322F028CD0074B2A8 /* DailyViewDetailController.swift in Sources */,
 				A94B6D3722E985C300E1C384 /* LoginController.swift in Sources */,
 				A9FF3E2822EEAF49009F86B3 /* Department.swift in Sources */,
+				A96E86D222F274FF0054999B /* UserPreProjectAnalysisDetailController.swift in Sources */,
 				A9B5A9B222E9A57200D892AE /* NotificationService.swift in Sources */,
 				A9B5A9B022E9A34000D892AE /* Token.swift in Sources */,
 				A9FF3E2922EEAF49009F86B3 /* User.swift in Sources */,
+				A9FBC51922F16B1100ED7F06 /* ProjectPreUserAnalysisExtensions.swift in Sources */,
 				7B166D9F22F011DA002FEF1A /* ResetPasswordController.swift in Sources */,
 				A90A9C2D22F0130D0074B2A8 /* Helpers.swift in Sources */,
 				CBB4F61322F123AE001A2D76 /* EditDailyController.swift in Sources */,
+				A9FBC51B22F1703300ED7F06 /* WorkTypePreUserAnalysisDetailController.swift in Sources */,
 				A9FF3E2B22EEAF49009F86B3 /* WorkTypePreProjectAnalysis.swift in Sources */,
+				A9FBC51322F16AAF00ED7F06 /* WorkTypePreProjectAnalysisExtensions.swift in Sources */,
+				A96E86CE22F2681A0054999B /* ProjectPreUserAnalysisDetailController.swift in Sources */,
 				A90A9C2A22EFECE30074B2A8 /* WorkTypeExtensions.swift in Sources */,
 				CB4034E522F01F7D003FD4B5 /* CreateDailyController.swift in Sources */,
 				CB4034E922F043CE003FD4B5 /* JobTypeExtensions.swift in Sources */,

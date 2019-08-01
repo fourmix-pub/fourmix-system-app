@@ -67,6 +67,8 @@ struct Daily: Codable {
 
 struct DailyCollection: Codable {
     var data: [Daily]
+    var links: Links
+    var meta: Meta
 }
 
 struct DailyData: Codable {

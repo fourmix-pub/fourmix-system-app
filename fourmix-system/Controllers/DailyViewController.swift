@@ -163,6 +163,9 @@ class DailyViewController: UITableViewController {
         self.workTypeNameLabel.text = "選択してください"
     }
     
+    @IBAction func refreshButtonHasTapped(_ sender: Any) {
+        self.loadData()
+    }
     
     
     // MARK: - Navigation

@@ -23,10 +23,10 @@ enum NetworkService {
     case jobTypeCollection
     case customerCollection
     case departmentCollection
-    case workTypePreProjectAnalysis(query: [String: Any])
-    case userPreProjectAnalysis(query: [String: Any])
-    case workTypePreUserAnalysis(query: [String: Any])
-    case projectPreUserAnalysis(query: [String: Any])
+    case workTypePreProjectAnalysisCollection(query: [String: Any])
+    case userPreProjectAnalysisCollection(query: [String: Any])
+    case workTypePreUserAnalysisCollection(query: [String: Any])
+    case projectPreUserAnalysisCollection(query: [String: Any])
 }
 
 extension NetworkService: TargetType {
@@ -55,20 +55,20 @@ extension NetworkService: TargetType {
             return "/customers"
         case .departmentCollection:
             return "/departments"
-        case .workTypePreProjectAnalysis:
+        case .workTypePreProjectAnalysisCollection:
             return "/analytics/workTypePreProject"
-        case .userPreProjectAnalysis:
+        case .userPreProjectAnalysisCollection:
             return "/analytics/userPreProject"
-        case .workTypePreUserAnalysis:
+        case .workTypePreUserAnalysisCollection:
             return "/analytics/workTypePreUser"
-        case .projectPreUserAnalysis:
+        case .projectPreUserAnalysisCollection:
             return "/analytics/projectPreUser"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .profile, .userCollection, .userDailies, .dailyCollection, .projectCollection, .workTypeCollection, .jobTypeCollection, .customerCollection, .departmentCollection, .workTypePreProjectAnalysis, .userPreProjectAnalysis, .workTypePreUserAnalysis, .projectPreUserAnalysis:
+        case .profile, .userCollection, .userDailies, .dailyCollection, .projectCollection, .workTypeCollection, .jobTypeCollection, .customerCollection, .departmentCollection, .workTypePreProjectAnalysisCollection, .userPreProjectAnalysisCollection, .workTypePreUserAnalysisCollection, .projectPreUserAnalysisCollection:
             return .get
         case .dailyCreate:
             return .post
@@ -114,13 +114,13 @@ extension NetworkService: TargetType {
                 "rest": dailyCreator.rest as Any,
                 "note": dailyCreator.note as Any
                 ], encoding: JSONEncoding.default)
-        case let .workTypePreProjectAnalysis(query):
+        case let .workTypePreProjectAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .userPreProjectAnalysis(query):
+        case let .userPreProjectAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .workTypePreUserAnalysis(query):
+        case let .workTypePreUserAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
-        case let .projectPreUserAnalysis(query):
+        case let .projectPreUserAnalysisCollection(query):
             return .requestParameters(parameters: query, encoding: URLEncoding.queryString)
         }
     }
@@ -128,6 +128,30 @@ extension NetworkService: TargetType {
     var sampleData: Data {
         return "Half measures are as bad as nothing at all.".utf8Encoded
     }
+    
+    var headers: [String: String]? {
+        return [
+            "Accept": "application/json",
+            "Authorization": (Token.find()?.get() ?? "")
+        ]
+    }
+}
+
+enum LoadMoreDataNetworkService {
+    case loadFrom(url: String)
+}
+
+extension LoadMoreDataNetworkService: TargetType {
+    var baseURL: URL {
+        switch self {
+        case .loadFrom(let url):
+            return URL(string: url)!
+        }
+    }
+    var path: String { return "" }
+    var method: Moya.Method { return .get }
+    var task: Task { return .requestPlain }
+    var sampleData: Data { return "Half measures are as bad as nothing at all.".utf8Encoded }
     
     var headers: [String: String]? {
         return [
@@ -152,6 +176,7 @@ class NetworkProvider {
     static let main = NetworkProvider()
     
     let provider = MoyaProvider<NetworkService>()
+    let loadMoreProvider = MoyaProvider<LoadMoreDataNetworkService>()
     
     func noContent(request: NetworkService, callback: @escaping (Bool) -> Void) {
         provider.request(request) { result in
@@ -261,7 +286,62 @@ class NetworkProvider {
                 callback(nil)
                 break
             }
-
+        }
+    }
+    
+    func data(request: LoadMoreDataNetworkService, callback: @escaping (Data?) -> Void) {
+        loadMoreProvider.request(request) { result in
+            switch result {
+            case let .success(response):
+                
+                do {
+                    _ = try response.filterSuccessfulStatusCodes()
+                    let data = response.data
+                    callback(data)
+                } catch {
+                    switch response.statusCode {
+                    case 401:
+                        NotificationCenter.default.post(name: LocalNotificationService.unauthorized, object: nil, userInfo: [
+                            "code": 401,
+                            "message": "メールアドレスまたはパスワードが間違っています。"
+                            ])
+                        callback(nil)
+                    case 422:
+                        let data = response.data
+                        let coder = JSONDecoder()
+                        let errors = try! coder.decode(Errors.self, from: data)
+                        var message: String = ""
+                        for errorsObj in errors.errors {
+                            for error in errorsObj.value {
+                                message += error
+                            }
+                        }
+                        NotificationCenter.default.post(name: LocalNotificationService.inputError, object: nil, userInfo: [
+                            "code": 422,
+                            "message": message
+                            ])
+                        callback(nil)
+                    default:
+                        print(error)
+                        print(response.statusCode)
+                        NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                            "code": response.statusCode,
+                            "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                            ])
+                        callback(nil)
+                    }
+                }
+                
+                break
+            case let .failure(error):
+                print(error)
+                NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                    "code": 999,
+                    "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                    ])
+                callback(nil)
+                break
+            }
         }
     }
 }
