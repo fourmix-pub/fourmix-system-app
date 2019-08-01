@@ -12,6 +12,7 @@ import KRProgressHUD
 class DailyController: UITableViewController {
 
     var dailies: [Daily] = []
+    var dailyCollection: DailyCollection?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,25 @@ class DailyController: UITableViewController {
             if let dailyCollection = dailyCollection {
                 KRProgressHUD.dismiss()
                 self.dailies = dailyCollection.data
+                self.dailyCollection = dailyCollection
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
+            }
+        }
+    }
+    
+    func loadMoreData(url: String) {
+        KRProgressHUD.show()
+        NetworkProvider.main.data(request: .loadFrom(url: url)) { (data) in
+            KRProgressHUD.dismiss()
+            if let data = data {
+                let corder = JSONDecoder()
+                let dailyCollection = try? corder.decode(DailyCollection.self, from: data)
+                if let dailyCollection = dailyCollection {
+                    self.dailyCollection = dailyCollection
+                    self.dailies.append(contentsOf: dailyCollection.data)
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -110,6 +128,19 @@ class DailyController: UITableViewController {
         deleteAction.backgroundColor = .red
         
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let dailyCollection = dailyCollection {
+            let lastCell = self.dailies.count - 1
+            if lastCell == indexPath.row {
+                guard let nextUrl = dailyCollection.links.next else {
+                    return
+                }
+                
+                self.loadMoreData(url: nextUrl)
+            }
+        }
     }
     
     @IBAction func unwindToDailyList(unwindSngue: UIStoryboardSegue) {

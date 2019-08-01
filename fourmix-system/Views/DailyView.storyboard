@@ -225,7 +225,14 @@
                             <outlet property="delegate" destination="lyi-wI-xba" id="hrI-5C-HQR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="日報閲覧" id="xWF-Vn-scV"/>
+                    <navigationItem key="navigationItem" title="日報閲覧" id="xWF-Vn-scV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="3jQ-fR-Cex">
+                            <color key="tintColor" name="brand"/>
+                            <connections>
+                                <action selector="refreshButtonHasTapped:" destination="lyi-wI-xba" id="sgG-mq-BlS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="endField" destination="7J1-lp-IzV" id="jfx-sX-Pud"/>
                         <outlet property="projectNameLabel" destination="9Qe-SS-dko" id="Giu-ht-0Uo"/>

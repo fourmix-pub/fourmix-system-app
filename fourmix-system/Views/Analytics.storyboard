@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -87,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="担当者別作業分類表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qeW-ul-llE">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="担当者別プロジェクト集計表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qeW-ul-llE">
                                                     <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -108,7 +109,14 @@
                             <outlet property="delegate" destination="PF4-uH-YY8" id="1F0-f0-cAO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="集計表" id="o7V-J2-4wc"/>
+                    <navigationItem key="navigationItem" title="集計表" id="o7V-J2-4wc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="pSQ-fO-Ub5">
+                            <color key="tintColor" name="brand"/>
+                            <connections>
+                                <action selector="refreshButtonHasTapped:" destination="PF4-uH-YY8" id="hbv-Bd-BEM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96T-jh-LWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +161,9 @@
     </scenes>
     <resources>
         <image name="analytics-25" width="25" height="25"/>
+        <namedColor name="brand">
+            <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ebL-Ge-K8g"/>

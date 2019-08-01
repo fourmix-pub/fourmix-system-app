@@ -7,26 +7,19 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class PreProjectAnalyticsController: UITableViewController {
 
     var segueIdentifier: String!
     
-    var projects: [Project] = []
+    var projects: [Project]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         observes()
-        loadData()
-    }
-    
-    func loadData() {
-        ProjectCollection.load { (projectCollection) in
-            if let projectCollection = projectCollection {
-                self.projects = projectCollection.data
-                self.tableView.reloadData()
-            }
-        }
+        
+        navigationItem.title = naviTitle(from: segueIdentifier)
     }
     
     func observes() {
@@ -68,7 +61,9 @@ class PreProjectAnalyticsController: UITableViewController {
         ]
         
         if segueIdentifier == "WorkTypePreProjectAnalysisSegue" {
+            KRProgressHUD.show()
             WorkTypePreProjectAnalysisCollection.load(query: query) { (workTypePreProjectAnalysisCollection) in
+                KRProgressHUD.dismiss()
                 if let workTypePreProjectAnalysisCollection = workTypePreProjectAnalysisCollection {
                     self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
                         "project": project,
@@ -79,7 +74,9 @@ class PreProjectAnalyticsController: UITableViewController {
         }
         
         if segueIdentifier == "UserPreProjectAnalysisSegue" {
+            KRProgressHUD.show()
             UserPreProjectAnalysisCollection.load(query: query) { (userPreProjectAnalysisCollection) in
+                KRProgressHUD.dismiss()
                 if let userPreProjectAnalysisCollection = userPreProjectAnalysisCollection {
                     self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
                         "project": project,
@@ -96,6 +93,17 @@ class PreProjectAnalyticsController: UITableViewController {
             return "WorkTypePreProjectAnalysisDetailSegue"
         case "UserPreProjectAnalysisSegue":
             return "UserPreProjectAnalysisDetailSegue"
+        default:
+            return ""
+        }
+    }
+    
+    func naviTitle(from segueIdentifier: String) -> String {
+        switch segueIdentifier {
+        case "WorkTypePreProjectAnalysisSegue":
+            return "プロジェクト別作業分類"
+        case "UserPreProjectAnalysisSegue":
+            return "プロジェクト別担当者"
         default:
             return ""
         }
