@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginController: UIViewController {
     
@@ -75,6 +76,15 @@ class LoginController: UIViewController {
         
         self.present(alert, animated: true)
     }
+    
+    @IBAction func resetPasswordButtonHasTapped(_ sender: Any) {
+        let url = URL(string: "\(oauthUrl)/password/reset")!
+        let safariViewController = SFSafariViewController(url: url)
+        let navigationController = UINavigationController(rootViewController: safariViewController)
+        navigationController.setNavigationBarHidden(true, animated: false)
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
     
     
     
