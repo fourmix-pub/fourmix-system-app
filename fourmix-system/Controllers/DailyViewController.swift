@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class DailyViewController: UITableViewController {
     
     var user: User?
     var project: Project?
     var workType: WorkType?
+    
+    var users: [User] = []
+    var projects: [Project] = []
+    var workTypes: [WorkType] = []
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var projectNameLabel: UILabel!
@@ -22,9 +27,43 @@ class DailyViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         setDatePicker()
         observes()
         self.tableView.keyboardDismissMode = .onDrag
+    }
+    
+    func loadData() {
+        KRProgressHUD.show()
+        
+        DispatchQueue.main.async {
+            ProjectCollection.load { (projectCollection) in
+                if let projectCollection = projectCollection {
+                    self.projects = projectCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.users.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+            
+            WorkTypeCollection.load { (workTypeCollection) in
+                if let workTypeCollection = workTypeCollection {
+                    self.workTypes = workTypeCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.users.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+            
+            UserCollection.load { (userCollection) in
+                if let userCollection = userCollection {
+                    self.users = userCollection.data
+                    if self.projects.count > 0 && self.workTypes.count > 0 && self.users.count > 0 {
+                        KRProgressHUD.dismiss()
+                    }
+                }
+            }
+        }
     }
     
     func observes() {
@@ -96,7 +135,7 @@ class DailyViewController: UITableViewController {
     
     
     @IBAction func searchDailies(_ sender: Any) {
-        
+        KRProgressHUD.show()
         let query:[String: Any] = [
             "filter[user_id]": user?.id ?? "",
             "filter[project_id]": project?.id ?? "",
@@ -106,6 +145,7 @@ class DailyViewController: UITableViewController {
         ]
         
         DailyCollection.load(query: query) { (dailyCollection) in
+            KRProgressHUD.dismiss()
             if let dailyCollection = dailyCollection {
                 self.performSegue(withIdentifier: "DailySearchResultsSegue", sender: dailyCollection)
             }
@@ -129,10 +169,26 @@ class DailyViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DailySearchResultsSegue" {
+        switch segue.identifier {
+        case "DailySearchResultsSegue":
             let destination = segue.destination as! DailyViewDetailController
             let dailyCollection = sender as? DailyCollection
             destination.dailies = dailyCollection?.data
+            break
+        case "ProjectNameSegue":
+            let destination = segue.destination as! ProjectSearchController
+            destination.projects = self.projects
+            break
+        case "WorkTypeSegue":
+            let destination = segue.destination as! WorkTypeSearchController
+            destination.workTypes = self.workTypes
+            break
+        case "UserNameSegue":
+            let destination = segue.destination as! UserSearchController
+            destination.users = self.users
+            break
+        default:
+            break
         }
     }
 }

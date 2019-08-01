@@ -24,7 +24,7 @@ class DailyViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         dailyCardView.layer.borderWidth = 1
-        dailyCardView.layer.borderColor = UIColor(named: "brand-blue")?.cgColor
+        dailyCardView.layer.borderColor = UIColor(named: "brand")?.cgColor
         dailyCardView.layer.cornerRadius = 8
         dailyCardView.clipsToBounds = true
     }
@@ -36,7 +36,7 @@ class DailyViewCell: UITableViewCell {
     }
     
     func update(daily: Daily) {
-        dateLabel.text = daily.attributes.date
+        dateLabel.text = Date.createFromFormat(string: daily.attributes.date, format: "yyyy-MM-dd HH:mm:ss")?.format("yyyy年MM月dd日")
         projectNameLabel.text = daily.relationships.project.attributes.name
         customerNameLabel.text = daily.relationships.project.relationships.customer.attributes.name
         workTypeLabel.text = daily.relationships.workType.attributes.name

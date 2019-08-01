@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class DailyController: UITableViewController {
 
@@ -15,26 +16,52 @@ class DailyController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        observes()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
     }
 
-    func loadData() {
+    @objc func loadData() {
+        KRProgressHUD.show()
         DailyCollection.load { (dailyCollection) in
             if let dailyCollection = dailyCollection {
+                KRProgressHUD.dismiss()
                 self.dailies = dailyCollection.data
                 self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
         }
     }
     
+    func observes() {
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.dailyHasCreated, object: nil, queue: nil) { (notification) in
+            guard let daily = notification.userInfo!["daily"] else { return }
+            
+            self.dailies.insert(daily as! Daily, at: 0)
+            self.tableView.reloadData()
+        }
+        
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.dailyHasUpdated, object: nil, queue: nil) { (notification) in
+            guard let daily = notification.userInfo!["daily"] else { return }
+            
+            if let index = self.dailies.firstIndex(where: { $0.id == (daily as! Daily).id}) {
+                self.dailies[index] = daily as! Daily
+            }
+            
+            self.tableView.reloadData()
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: LocalNotificationService.dailyHasDeleted, object: nil)
+    }
+    
     // MARK: - Table view data source
 
-    // セクションの行の数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return dailies.count
     }
 
-    // セルの指定
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for: indexPath) as! DailyCell
 
@@ -51,18 +78,38 @@ class DailyController: UITableViewController {
         }
         // 削除
         let deleteAction = UIContextualAction(style: .normal, title: "削除") { (_, _, _) in
-            let dailyCreator = DailyCreator(id: self.dailies[indexPath.row].id, workTypeId: nil, jobTypeId: nil, projectId: nil, date: nil, start: nil, end: nil, rest: nil, note: nil)
-            dailyCreator.dailyDelete(callback: { (data) in
-                if data! {
-                    self.loadData()
-                } else {
-                    print("失敗しました")
-                }
+            let alertView = UIAlertController(title: nil, message: "日報を削除します、よろしいですか？", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "キャンセル", style: .default, handler: { (_) in
+                alertView.dismiss(animated: true)
             })
+            
+            let deleteAction = UIAlertAction(title: "削除", style: .default, handler: { (_) in
+                let dailyCreator = DailyCreator(id: self.dailies[indexPath.row].id,
+                                                workTypeId: nil,
+                                                jobTypeId: nil,
+                                                projectId: nil,
+                                                date: nil,
+                                                start: nil,
+                                                end: nil,
+                                                rest: nil,
+                                                note: nil)
+                dailyCreator.dailyDelete(callback: { (result) in
+                    if result {
+                        NotificationCenter.default.post(name: LocalNotificationService.dailyHasDeleted, object: nil)
+                    }
+                })
+            })
+            
+            alertView.addAction(cancelAction)
+            alertView.addAction(deleteAction)
+            
+            self.present(alertView, animated: true)
         }
+        editAction.backgroundColor = UIColor(named: "brand-blue")
         deleteAction.backgroundColor = .red
         
-        return UISwipeActionsConfiguration(actions: [editAction, deleteAction])
+        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
     }
     
     @IBAction func unwindToDailyList(unwindSngue: UIStoryboardSegue) {

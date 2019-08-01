@@ -7,5 +7,6 @@ target 'fourmix-system' do
 
   # Pods for fourmix-system
   pod 'Moya', '~> 13.0'
+  pod "KRProgressHUD"
 
 end

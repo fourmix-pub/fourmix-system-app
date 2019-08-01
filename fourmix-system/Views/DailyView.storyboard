@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Daily View Controller-->
+        <!--日報閲覧-->
         <scene sceneID="oCH-zd-GRs">
             <objects>
                 <tableViewController id="lyi-wI-xba" customClass="DailyViewController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="a0L-gu-p9l" kind="show" id="VuO-1A-uJF"/>
+                                            <segue destination="a0L-gu-p9l" kind="show" identifier="UserNameSegue" id="VuO-1A-uJF"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YFt-Bl-vjN" detailTextLabel="9Qe-SS-dko" style="IBUITableViewCellStyleValue1" id="SwQ-q6-6nk">
@@ -72,7 +72,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hdp-ke-1fT" kind="show" id="36l-nQ-QlX"/>
+                                            <segue destination="hdp-ke-1fT" kind="show" identifier="ProjectNameSegue" id="36l-nQ-QlX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="WaO-80-KUp" detailTextLabel="T9T-hd-QSD" style="IBUITableViewCellStyleValue1" id="Yqe-UH-GqX">
@@ -99,7 +99,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="heW-7l-R2U" kind="show" id="Z1a-pm-0aV"/>
+                                            <segue destination="heW-7l-R2U" kind="show" identifier="WorkTypeSegue" id="Z1a-pm-0aV"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nwh-0k-gbE">
@@ -225,7 +225,7 @@
                             <outlet property="delegate" destination="lyi-wI-xba" id="hrI-5C-HQR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xWF-Vn-scV"/>
+                    <navigationItem key="navigationItem" title="日報閲覧" id="xWF-Vn-scV"/>
                     <connections>
                         <outlet property="endField" destination="7J1-lp-IzV" id="jfx-sX-Pud"/>
                         <outlet property="projectNameLabel" destination="9Qe-SS-dko" id="Giu-ht-0Uo"/>
@@ -239,7 +239,7 @@
             </objects>
             <point key="canvasLocation" x="769.56521739130437" y="67.633928571428569"/>
         </scene>
-        <!--Daily View Detail Controller-->
+        <!--検索結果-->
         <scene sceneID="RJY-ww-fc7">
             <objects>
                 <tableViewController id="XKK-bG-P4O" customClass="DailyViewDetailController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,7 +268,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="brand-blue"/>
+                                                    <color key="backgroundColor" name="brand"/>
                                                     <constraints>
                                                         <constraint firstItem="aF3-sz-Myd" firstAttribute="centerY" secondItem="llH-c0-BFn" secondAttribute="centerY" id="74q-nJ-vi3"/>
                                                         <constraint firstAttribute="trailing" secondItem="aF3-sz-Myd" secondAttribute="trailing" constant="4" id="EBC-4I-pHZ"/>
@@ -456,6 +456,7 @@
                             <outlet property="delegate" destination="XKK-bG-P4O" id="q9c-nG-fRE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="検索結果" id="7XK-AN-3TH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dy6-P4-Gld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -600,9 +601,6 @@
         </namedColor>
         <namedColor name="brand-black">
             <color red="0.125" green="0.090000003576278687" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="brand-blue">
-            <color red="0.0" green="0.43900001049041748" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
