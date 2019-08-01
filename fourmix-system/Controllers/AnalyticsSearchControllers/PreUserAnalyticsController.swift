@@ -16,6 +16,7 @@ class PreUserAnalyticsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        observes()
         loadData()
     }
     
@@ -25,6 +26,22 @@ class PreUserAnalyticsController: UITableViewController {
                 self.users = userCollection.data
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    func observes() {
+        NotificationCenter.default.addObserver(forName: LocalNotificationService.inputError, object: nil, queue: nil) { (notification) in
+            guard let message = notification.userInfo!["message"] else { return }
+            
+            let alert = UIAlertController(title: "エラーです", message: message as? String, preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
+                alert.dismiss(animated: true)
+            })
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true)
         }
     }
     
