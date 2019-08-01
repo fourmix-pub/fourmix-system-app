@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingsController: UITableViewController {
     
@@ -39,6 +40,22 @@ class SettingsController: UITableViewController {
         }
         
         if indexPath.section == 1 && indexPath.row == 0 {
+            let url = URL(string: "\(oauthUrl)/privacy")!
+            let safariViewController = SFSafariViewController(url: url)
+            let navigationController = UINavigationController(rootViewController: safariViewController)
+            navigationController.setNavigationBarHidden(true, animated: false)
+            self.present(navigationController, animated: true, completion: nil)
+        }
+        
+        if indexPath.section == 1 && indexPath.row == 1 {
+            let url = URL(string: "https://github.com/fourmix-pub/fourmix-system-app/issues")!
+            let safariViewController = SFSafariViewController(url: url)
+            let navigationController = UINavigationController(rootViewController: safariViewController)
+            navigationController.setNavigationBarHidden(true, animated: false)
+            self.present(navigationController, animated: true, completion: nil)
+        }
+        
+        if indexPath.section == 2 && indexPath.row == 0 {
             let actionSheet = UIAlertController(title: nil, message: "ログアウトしますか？", preferredStyle: .actionSheet)
             let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel) { (_) in
                 actionSheet.dismiss(animated: true)
@@ -59,7 +76,6 @@ class SettingsController: UITableViewController {
             
             self.present(actionSheet, animated: true)
         }
-        
     }
     
     func observes() {
