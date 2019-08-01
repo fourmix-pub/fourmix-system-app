@@ -10,22 +10,12 @@ import UIKit
 
 class WorkTypeSearchController: UITableViewController {
     
-    var workTypes: [WorkType] = []
+    var workTypes: [WorkType]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
     }
     
-    func loadData() {
-        WorkTypeCollection.load { (workTypeCollection) in
-            if let workTypeCollection = workTypeCollection {
-                self.workTypes = workTypeCollection.data
-                self.tableView.reloadData()
-            }
-        }
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

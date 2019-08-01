@@ -153,6 +153,61 @@ class NetworkProvider {
     
     let provider = MoyaProvider<NetworkService>()
     
+    func noContent(request: NetworkService, callback: @escaping (Bool) -> Void) {
+        provider.request(request) { result in
+            switch result {
+            case let .success(response):
+                
+                do {
+                    _ = try response.filterSuccessfulStatusCodes()
+                    if response.statusCode == 204 {
+                        callback(true)
+                    }
+                } catch {
+                    switch response.statusCode {
+                    case 401:
+                        NotificationCenter.default.post(name: LocalNotificationService.unauthorized, object: nil, userInfo: [
+                            "code": 401,
+                            "message": "メールアドレスまたはパスワードが間違っています。"
+                            ])
+                    case 422:
+                        let data = response.data
+                        let coder = JSONDecoder()
+                        let errors = try! coder.decode(Errors.self, from: data)
+                        var message: String = ""
+                        for errorsObj in errors.errors {
+                            for error in errorsObj.value {
+                                message += error
+                            }
+                        }
+                        NotificationCenter.default.post(name: LocalNotificationService.inputError, object: nil, userInfo: [
+                            "code": 422,
+                            "message": message
+                            ])
+                    default:
+                        print(error)
+                        print(response.statusCode)
+                        NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                            "code": response.statusCode,
+                            "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                            ])
+                    }
+                }
+                callback(false)
+                break
+            case let .failure(error):
+                print(error)
+                NotificationCenter.default.post(name: LocalNotificationService.networkError, object: nil, userInfo: [
+                    "code": 999,
+                    "message": "サーバーへ接続ができません。インターネット接続を確認してください。"
+                    ])
+                callback(false)
+                break
+            }
+            
+        }
+    }
+    
     func data(request: NetworkService, callback: @escaping (Data?) -> Void) {
         provider.request(request) { result in
             switch result {
