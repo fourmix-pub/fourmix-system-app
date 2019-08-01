@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Analytics Controller-->
+        <!--集計表-->
         <scene sceneID="JEf-6B-mhV">
             <objects>
                 <tableViewController id="PF4-uH-YY8" customClass="AnalyticsController" customModule="fourmix_system" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="PF4-uH-YY8" id="1F0-f0-cAO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="o7V-J2-4wc"/>
+                    <navigationItem key="navigationItem" title="集計表" id="o7V-J2-4wc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96T-jh-LWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
