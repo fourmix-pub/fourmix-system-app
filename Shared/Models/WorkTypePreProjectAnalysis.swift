@@ -33,5 +33,5 @@ struct WorkTypePreProjectAnalysis: Codable {
 }
 
 struct WorkTypePreProjectAnalysisCollection: Codable {
-    var data: [UserPreProjectAnalysis]
+    var data: [WorkTypePreProjectAnalysis]
 }

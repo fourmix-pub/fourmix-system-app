@@ -50,12 +50,23 @@ class PreUserAnalyticsController: UITableViewController {
             "user_id": user.id
         ]
         
-        WorkTypePreUserAnalysisCollection.load(query: query) { (workTypePreUserAnalysisCollection) in
-            if let workTypePreUserAnalysisCollection = workTypePreUserAnalysisCollection {
-                self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
-                    "user": user,
-                    "data": workTypePreUserAnalysisCollection
-                    ])
+        if segueIdentifier == "WorkTypePreUserAnalysisSegue" {
+            WorkTypePreUserAnalysisCollection.load(query: query) { (workTypePreUserAnalysisCollection) in
+                if let workTypePreUserAnalysisCollection = workTypePreUserAnalysisCollection {
+                    self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
+                        "user": user,
+                        "data": workTypePreUserAnalysisCollection
+                        ])
+                }
+            }
+        } else {
+            ProjectPreUserAnalysisCollection.load(query: query) { (projectPreUserAnalysisCollection) in
+                if let projectPreUserAnalysisCollection = projectPreUserAnalysisCollection {
+                    self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
+                        "user": user,
+                        "data": projectPreUserAnalysisCollection
+                        ])
+                }
             }
         }
     }
@@ -85,7 +96,12 @@ class PreUserAnalyticsController: UITableViewController {
         }
         
         if segue.identifier == "ProjectPreUserAnalysisDetailSegue" {
-            
+            let destination = segue.destination as! ProjectPreUserAnalysisDetailController
+            let sender = sender as! [String: Any?]
+            let projectPreUserAnalysisCollection = sender["data"] as? ProjectPreUserAnalysisCollection
+            let user = sender["user"] as? User
+            destination.projectPreUserAnalysisDetails = projectPreUserAnalysisCollection?.data
+            destination.user = user
         }
      }
 }

@@ -45,7 +45,30 @@ class PreProjectAnalyticsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let project = projects[indexPath.row]
-        self.performSegue(withIdentifier: identifier(from: segueIdentifier), sender: project)
+        
+        let query:[String: Any] = [
+            "project_id": project.id
+        ]
+        
+        if segueIdentifier == "WorkTypePreProjectAnalysisSegue" {
+            WorkTypePreProjectAnalysisCollection.load(query: query) { (workTypePreProjectAnalysisCollection) in
+                if let workTypePreProjectAnalysisCollection = workTypePreProjectAnalysisCollection {
+                    self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
+                        "project": project,
+                        "data": workTypePreProjectAnalysisCollection
+                        ])
+                }
+            }
+        } else {
+            UserPreProjectAnalysisCollection.load(query: query) { (userPreProjectAnalysisCollection) in
+                if let userPreProjectAnalysisCollection = userPreProjectAnalysisCollection {
+                    self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
+                        "project": project,
+                        "data": userPreProjectAnalysisCollection
+                        ])
+                }
+            }
+        }
     }
     
     func identifier(from segueIdentifier: String) -> String {
@@ -64,11 +87,21 @@ class PreProjectAnalyticsController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WorkTypePreProjectAnalysisDetailSegue" {
-            
+            let destination = segue.destination as! WorkTypePreProjectAnalysisDetailController
+            let sender = sender as! [String: Any?]
+            let workTypePreProjectAnalysisDetailCollection = sender["data"] as? WorkTypePreProjectAnalysisCollection
+            let project = sender["project"] as? Project
+            destination.workTypePreProjectAnalysisDetails = workTypePreProjectAnalysisDetailCollection?.data
+            destination.project = project
         }
         
         if segue.identifier == "UserPreProjectAnalysisDetailSegue" {
-            
+            let destination = segue.destination as! UserPreProjectAnalysisDetailController
+            let sender = sender as! [String: Any?]
+            let userPreProjectAnalysisDetailCollection = sender["data"] as? UserPreProjectAnalysisCollection
+            let project = sender["project"] as? Project
+            destination.userPreProjectAnalysisDetails = userPreProjectAnalysisDetailCollection?.data
+            destination.project = project
         }
     }
     
