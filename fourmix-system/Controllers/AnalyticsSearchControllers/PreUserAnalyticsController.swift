@@ -76,7 +76,9 @@ class PreUserAnalyticsController: UITableViewController {
                         ])
                 }
             }
-        } else {
+        }
+        
+        if segueIdentifier == "ProjectPreUserAnalysisSegue" {
             ProjectPreUserAnalysisCollection.load(query: query) { (projectPreUserAnalysisCollection) in
                 if let projectPreUserAnalysisCollection = projectPreUserAnalysisCollection {
                     self.performSegue(withIdentifier: self.identifier(from: self.segueIdentifier), sender: [
