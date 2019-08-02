@@ -63,6 +63,8 @@ class CreateDailyController: UITableViewController {
             JobTypeCollection.load { (jobTypeCollection) in
                 if let jobTypeCollection = jobTypeCollection {
                     self.jobTypes = jobTypeCollection.data
+                    self.jobType = jobTypeCollection.data[0]
+                    self.jobTypeNameLabel.text = jobTypeCollection.data[0].attributes.name
                     if self.projects.count > 0 && self.workTypes.count > 0 && self.jobTypes.count > 0 {
                         KRProgressHUD.dismiss()
                     }
