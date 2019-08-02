@@ -180,7 +180,15 @@ class CreateDailyController: UITableViewController {
     // 作成ボタン
     @IBAction func saveButtonHasTapped(_ sender: Any) {
         KRProgressHUD.show()
-        let dailyCreator = DailyCreator(id: nil, workTypeId: workType?.id, jobTypeId: jobType?.id, projectId: project?.id, date: dateField.text, start: startField.text, end: endField.text, rest: nil, note: noteView.text)
+        let dailyCreator = DailyCreator(id: nil,
+                                        workTypeId: workType?.id,
+                                        jobTypeId: jobType?.id,
+                                        projectId: project?.id,
+                                        date: dateField.text,
+                                        start: startField.text,
+                                        end: endField.text,
+                                        rest: Int(restTimeField.text ?? ""),
+                                        note: noteView.text)
         print(dailyCreator)
         
         dailyCreator.dailyCreate { (daily) in
