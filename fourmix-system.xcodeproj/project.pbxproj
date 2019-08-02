@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */; };
 		7B166D9B22EEEAAC002FEF1A /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */; };
 		7B166D9F22F011DA002FEF1A /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */; };
 		7B166DA122F0429B002FEF1A /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B166DA022F0429B002FEF1A /* Systems.swift */; };
+		7FA00DE6B380A08F35DC4935 /* Pods_fourmix_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4C9EE6E924825D1980ACCB /* Pods_fourmix_system.framework */; };
 		A90A9C1E22EFD3D30074B2A8 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */; };
 		A90A9C2022EFD47D0074B2A8 /* UserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */; };
 		A90A9C2222EFDDE70074B2A8 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */; };
@@ -71,11 +71,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
 		7B166D9A22EEEAAC002FEF1A /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		7B166D9E22F011DA002FEF1A /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		7B166DA022F0429B002FEF1A /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
-		83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
+		84D5254006D09DD5D8C365BE /* Pods-fourmix-system.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.debug.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.debug.xcconfig"; sourceTree = "<group>"; };
 		A90A9C1D22EFD3D30074B2A8 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		A90A9C1F22EFD47D0074B2A8 /* UserExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensions.swift; sourceTree = "<group>"; };
 		A90A9C2122EFDDE70074B2A8 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		A9FF3E2322EEAF49009F86B3 /* JobType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
 		A9FF3E2422EEAF49009F86B3 /* WorkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkType.swift; sourceTree = "<group>"; };
 		A9FF3E3022EEAF67009F86B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B2520F84B2A35C83BE06A39A /* Pods-fourmix-system.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fourmix-system.release.xcconfig"; path = "Target Support Files/Pods-fourmix-system/Pods-fourmix-system.release.xcconfig"; sourceTree = "<group>"; };
 		CB4034DE22EFCE62003FD4B5 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 		CB4034E022EFDBE5003FD4B5 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
 		CB4034E222EFE4B0003FD4B5 /* DailyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExtensions.swift; sourceTree = "<group>"; };
@@ -132,13 +132,13 @@
 		CB4034E622F04351003FD4B5 /* JobTypeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeSearchController.swift; sourceTree = "<group>"; };
 		CB4034E822F043CE003FD4B5 /* JobTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTypeExtensions.swift; sourceTree = "<group>"; };
 		CBB4F61222F123AE001A2D76 /* EditDailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDailyController.swift; sourceTree = "<group>"; };
+		EB4C9EE6E924825D1980ACCB /* Pods_fourmix_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fourmix_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4622E94AF3003808A4 /* fourmix-system.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fourmix-system.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E09A4922E94AF3003808A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E09A4E22E94AF3003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2E09A5022E94AF5003808A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E09A5322E94AF5003808A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E09A5522E94AF5003808A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fourmix_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +146,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEFD58C9D51E5B551700637 /* Pods_fourmix_system.framework in Frameworks */,
+				7FA00DE6B380A08F35DC4935 /* Pods_fourmix_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186F088A0B4FAD8EFAE1B9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C9EE6E924825D1980ACCB /* Pods_fourmix_system.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A90A9C1C22EFD37B0074B2A8 /* DailySearchControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,18 +293,10 @@
 		B1D2E8E6F83EBDE5246C0D4D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */,
-				83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */,
+				84D5254006D09DD5D8C365BE /* Pods-fourmix-system.debug.xcconfig */,
+				B2520F84B2A35C83BE06A39A /* Pods-fourmix-system.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B6C35232CBC664C324AA565B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F96F1FBE3810B6BDE17F9DF3 /* Pods_fourmix_system.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CB4034D922EFCCDF003FD4B5 /* Cells */ = {
@@ -316,7 +316,7 @@
 				F2E09A4822E94AF3003808A4 /* fourmix-system */,
 				F2E09A4722E94AF3003808A4 /* Products */,
 				B1D2E8E6F83EBDE5246C0D4D /* Pods */,
-				B6C35232CBC664C324AA565B /* Frameworks */,
+				186F088A0B4FAD8EFAE1B9B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,11 +352,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2E09A5822E94AF5003808A4 /* Build configuration list for PBXNativeTarget "fourmix-system" */;
 			buildPhases = (
-				7DE77B9F44AD20EB7F6CC7FF /* [CP] Check Pods Manifest.lock */,
+				41D36955E3C50433F48C3017 /* [CP] Check Pods Manifest.lock */,
 				F2E09A4222E94AF3003808A4 /* Sources */,
 				F2E09A4322E94AF3003808A4 /* Frameworks */,
 				F2E09A4422E94AF3003808A4 /* Resources */,
-				37851BD318C073FB39AA793E /* [CP] Embed Pods Frameworks */,
+				AAF63E8C995F9F44693DC569 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,24 +422,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37851BD318C073FB39AA793E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7DE77B9F44AD20EB7F6CC7FF /* [CP] Check Pods Manifest.lock */ = {
+		41D36955E3C50433F48C3017 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,6 +442,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAF63E8C995F9F44693DC569 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fourmix-system/Pods-fourmix-system-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -665,7 +678,7 @@
 		};
 		F2E09A5922E94AF5003808A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D6BAA10E60958B819F0E2BD /* Pods-fourmix-system.debug.xcconfig */;
+			baseConfigurationReference = 84D5254006D09DD5D8C365BE /* Pods-fourmix-system.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -684,7 +697,7 @@
 		};
 		F2E09A5A22E94AF5003808A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83276471EDB70B14815CF23E /* Pods-fourmix-system.release.xcconfig */;
+			baseConfigurationReference = B2520F84B2A35C83BE06A39A /* Pods-fourmix-system.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

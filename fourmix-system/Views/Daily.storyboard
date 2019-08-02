@@ -33,8 +33,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019/07/24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLC-mG-Rqc">
-                                                            <rect key="frame" x="4" y="9.5" width="374" height="29"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <rect key="frame" x="4" y="12" width="374" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -50,10 +50,10 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="KzN-5e-hgS">
-                                                    <rect key="frame" x="8" y="56" width="366" height="302.5"/>
+                                                    <rect key="frame" x="8" y="56" width="366" height="300"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-Bj-72H">
-                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="45"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="42.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プロジェクト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-4F-g1Y">
                                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="17"/>
@@ -62,15 +62,15 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#16 社内行事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LR-us-36l">
-                                                                    <rect key="frame" x="0.0" y="21" width="366" height="24"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <rect key="frame" x="0.0" y="21" width="366" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-dg-bjO">
-                                                            <rect key="frame" x="0.0" y="59" width="366" height="1"/>
+                                                            <rect key="frame" x="0.0" y="56.5" width="366" height="1"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -78,7 +78,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-ib-II0">
-                                                            <rect key="frame" x="0.0" y="74" width="366" height="42.5"/>
+                                                            <rect key="frame" x="0.0" y="71.5" width="366" height="42.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-Dx-4BS">
                                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="42.5"/>
@@ -106,7 +106,7 @@
                                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30~18:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-Hh-kPD">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30〜18:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-Hh-kPD">
                                                                             <rect key="frame" x="0.0" y="21" width="183" height="21.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                             <nil key="textColor"/>
@@ -117,7 +117,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0r-OG-8ij">
-                                                            <rect key="frame" x="0.0" y="130.5" width="366" height="1"/>
+                                                            <rect key="frame" x="0.0" y="128" width="366" height="1"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -125,7 +125,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="57d-fg-Qx4">
-                                                            <rect key="frame" x="0.0" y="145.5" width="366" height="42.5"/>
+                                                            <rect key="frame" x="0.0" y="143" width="366" height="42.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Y09-iM-pxb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="42.5"/>
@@ -164,7 +164,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-86-u7y">
-                                                            <rect key="frame" x="0.0" y="202" width="366" height="1"/>
+                                                            <rect key="frame" x="0.0" y="199.5" width="366" height="1"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -172,7 +172,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ec3-SN-7px">
-                                                            <rect key="frame" x="0.0" y="217" width="366" height="85.5"/>
+                                                            <rect key="frame" x="0.0" y="214.5" width="366" height="85.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="備考" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sE-eB-DGe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="17"/>
@@ -262,7 +262,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLR-jT-C3x">
-                                                    <rect key="frame" x="60" y="19" width="35" height="21"/>
+                                                    <rect key="frame" x="20" y="19" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -275,17 +275,11 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date-30" translatesAutoresizingMaskIntoConstraints="NO" id="J5I-Yc-hWY">
-                                                    <rect key="frame" x="20" y="14.5" width="30" height="30"/>
-                                                    <color key="tintColor" name="brand"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" multiplier="3" id="NEl-cq-V9D"/>
+                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" id="DpX-ov-hkD"/>
+                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="SoR-AQ-iG3"/>
                                                 <constraint firstItem="mGi-er-SmR" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="VG9-1k-GIK"/>
-                                                <constraint firstItem="J5I-Yc-hWY" firstAttribute="leading" secondItem="nMV-6N-vfP" secondAttribute="leadingMargin" id="YMa-ld-63V"/>
-                                                <constraint firstItem="pLR-jT-C3x" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="cxo-AI-4dE"/>
-                                                <constraint firstItem="J5I-Yc-hWY" firstAttribute="centerY" secondItem="nMV-6N-vfP" secondAttribute="centerY" id="jgw-ST-2yB"/>
                                                 <constraint firstAttribute="trailing" secondItem="mGi-er-SmR" secondAttribute="trailing" constant="24" id="z6D-FU-lN5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -518,11 +512,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="日報作成" id="KHS-89-Oa8">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="Thh-qb-7su">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Tug-ip-NQr" kind="unwind" identifier="UnwindToDailyList" unwindAction="unwindToDailyListWithUnwindSngue:" id="B94-Or-N7i"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="作成" id="f1F-cr-4gN">
+                            <color key="tintColor" name="brand"/>
                             <connections>
                                 <action selector="saveButtonHasTapped:" destination="oMI-DZ-g1s" id="fJN-Fr-yEw"/>
                             </connections>
@@ -962,11 +958,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="日報編集" id="m2J-rn-4sp">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="X8I-sy-lGw">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="yoq-fS-N9G" kind="unwind" identifier="UnwindToDailyListFromEditView" unwindAction="unwindToDailyListWithUnwindSngue:" id="4YZ-0Z-thK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="更新" id="abz-aN-kaF">
+                            <color key="tintColor" name="brand"/>
                             <connections>
                                 <action selector="updateButtonHasTapped:" destination="HEu-4X-74j" id="H2b-aW-VZo"/>
                             </connections>
@@ -1121,9 +1119,9 @@
     <resources>
         <image name="add-30" width="30" height="30"/>
         <image name="daily-25" width="25" height="25"/>
-        <image name="date-30" width="30" height="30"/>
         <namedColor name="brand">
             <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -93,10 +93,10 @@
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="hand-30" id="hes-gv-xED">
                                                     <rect key="frame" x="20" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="tintColor" red="0.94596115405184367" green="0.90590954076545493" blue="0.059454215385803644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" name="brand-black"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="tintColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" name="brand-black"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bWz-3Z-IVV" imageView="1au-Wh-FPd" style="IBUITableViewCellStyleDefault" id="gsl-J6-tts">
@@ -251,6 +251,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="プロフィール設定" id="5al-m3-c6D">
                         <barButtonItem key="rightBarButtonItem" title="更新" id="0e9-QM-4g9">
+                            <color key="tintColor" name="brand"/>
                             <connections>
                                 <action selector="updateButtonHasTapped:" destination="nms-2d-yzH" id="lOs-80-De3"/>
                             </connections>
@@ -353,6 +354,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="パスワード変更" id="bwW-fh-ilZ">
                         <barButtonItem key="rightBarButtonItem" title="変更" id="hJD-UJ-CiY">
+                            <color key="tintColor" name="brand"/>
                             <connections>
                                 <action selector="resetButtonHasTapped:" destination="EVW-xG-djt" id="e0E-Wh-hRg"/>
                             </connections>
@@ -402,5 +404,9 @@
         <namedColor name="brand">
             <color red="0.89399999380111694" green="0.32199999690055847" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="brand-black">
+            <color red="0.125" green="0.090000003576278687" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

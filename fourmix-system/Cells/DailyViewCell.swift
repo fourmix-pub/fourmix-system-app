@@ -42,7 +42,7 @@ class DailyViewCell: UITableViewCell {
         workTypeLabel.text = daily.relationships.workType.attributes.name
         workTimeLabel.text = daily.attributes.time.description
         userNameLabel.text = daily.relationships.user.attributes.name
-        costLabel.text = daily.attributes.cost.description
+        costLabel.text = "¥\(daily.attributes.cost.withComma)"
     }
 
 }

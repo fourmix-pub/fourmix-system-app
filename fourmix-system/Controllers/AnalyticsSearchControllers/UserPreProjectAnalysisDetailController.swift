@@ -30,8 +30,8 @@ class UserPreProjectAnalysisDetailController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnalyticsCell", for: indexPath)
         
         let analysis = userPreProjectAnalysisDetails[indexPath.row]
-        cell.textLabel?.text = analysis.attributes.userName
-        cell.detailTextLabel?.text = "¥\(analysis.attributes.workCostWithFormat)（\(analysis.attributes.workTime) 時間）"
+        cell.textLabel?.text = "\(analysis.attributes.userName)（\(analysis.attributes.workTime) 時間）"
+        cell.detailTextLabel?.text = "¥\(analysis.attributes.workCostWithFormat)"
         
         return cell
     }
