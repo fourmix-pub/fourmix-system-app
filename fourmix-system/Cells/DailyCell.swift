@@ -41,7 +41,7 @@ class DailyCell: UITableViewCell {
         workTypeLabel.text = daily.relationships.workType.attributes.name
         
         
-        workTimeLabel.text = "\(Date.createFromFormat(string: daily.attributes.start, format: "HH:mm:ss")?.format("HH:mm") ?? "00:00")~\(Date.createFromFormat(string: daily.attributes.end, format: "HH:mm:ss")?.format("HH:mm") ?? "00:00")"
+        workTimeLabel.text = "\(Date.createFromFormat(string: daily.attributes.start, format: "HH:mm:ss")?.format("HH:mm") ?? "00:00")〜\(Date.createFromFormat(string: daily.attributes.end, format: "HH:mm:ss")?.format("HH:mm") ?? "00:00")"
         restTimeLabel.text = "\(daily.attributes.rest ?? 0)分"
         jobTypeLabel.text = daily.relationships.jobType.attributes.name
         noteLabel.text = daily.attributes.note

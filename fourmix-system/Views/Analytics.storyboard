@@ -110,7 +110,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="集計表" id="o7V-J2-4wc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="pSQ-fO-Ub5">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="pSQ-fO-Ub5">
                             <color key="tintColor" name="brand"/>
                             <connections>
                                 <action selector="refreshButtonHasTapped:" destination="PF4-uH-YY8" id="hbv-Bd-BEM"/>
@@ -169,4 +169,5 @@
         <segue reference="ebL-Ge-K8g"/>
         <segue reference="qG0-uD-Hyu"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

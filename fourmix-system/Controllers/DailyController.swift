@@ -124,7 +124,7 @@ class DailyController: UITableViewController {
             
             self.present(alertView, animated: true)
         }
-        editAction.backgroundColor = UIColor(named: "brand-blue")
+        editAction.backgroundColor = UIColor(named: "orange")
         deleteAction.backgroundColor = .red
         
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
