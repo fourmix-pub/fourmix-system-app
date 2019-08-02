@@ -21,6 +21,8 @@ class EditProfileController: UITableViewController {
         
         nameField.text = user.attributes.name
         emailField.text = user.attributes.email
+        
+        tableView.keyboardDismissMode = .onDrag
     }
        
     @IBAction func updateButtonHasTapped(_ sender: Any) {
